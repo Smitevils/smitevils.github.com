@@ -17,6 +17,10 @@ $( document ).ready(function() {
 	$("#contacts").click(function() {
 		color.removeClass("red blue green orange").addClass("blue");
 	});
+	// При клике по ссылке #resume
+	$("#resume").click(function() {
+		color.removeClass("red blue green orange").addClass("green");
+	});
 
 	/* === Скрипт смены текста - инфо === */
 	$("#home").click(function() {
@@ -28,8 +32,11 @@ $( document ).ready(function() {
 	$("#projects").click(function() {
 		$('#info').html("<h2 class='green animate_2'>Проекты</h2><h4 class='animate_1'>Тут опишу свои проекты. Пока описывать некогда...</h4>");
 	});
+	$("#resume").click(function() {
+		$('#info').html("<h2 class='green animate_1'>Мое резюме</h2><h4 class='animate_1'>Краткий перечень того, что умею и мой опыт работы. Так же присутствует ссылочка на анкету в HeadHunter.</h4>");
+	});
 	$("#contacts").click(function() {
-		$('#info').html("<h2 class='blue animate_3'>Мои контакты</h2><h4 class='animate_1'>Нужен сайт визитка или небольшой интернет магазин? Обращайся! А может быть немного адаптивной верстки? Тут мой телефон, skype, социальный сети.</h4><h4 class='animate_1'>Можно так же и старую добрую заявочку оставить.</h4>");
+		$('#info').html("<h2 class='blue animate_3'>Мои контакты</h2><h4 class='animate_1'>Нужен сайт визитка или небольшой интернет магазин? Обращайся! Тут мой телефон, skype, социальный сети.</h4>");
 	});
 	/* === Скрипт смены текста - Контент === */
 	$("#home").click(function() {
@@ -37,24 +44,35 @@ $( document ).ready(function() {
 		$('#portfolio_block').css('display', 'none');
 		$('#projects_block').css('display', 'none');
 		$('#contacts_block').css('display', 'none');
+		$('#resume_block').css('display', 'none');
 	});
 	$("#porfolio").click(function() {
 		$('#home_block').css('display', 'none');
 		$('#portfolio_block').css('display', 'block');
 		$('#projects_block').css('display', 'none');
 		$('#contacts_block').css('display', 'none');
+		$('#resume_block').css('display', 'none');
 	});
 	$("#projects").click(function() {
 		$('#home_block').css('display', 'none');
 		$('#portfolio_block').css('display', 'none');
 		$('#projects_block').css('display', 'block');
 		$('#contacts_block').css('display', 'none');
+		$('#resume_block').css('display', 'none');
 	});
 	$("#contacts").click(function() {
 		$('#home_block').css('display', 'none');
 		$('#portfolio_block').css('display', 'none');
 		$('#projects_block').css('display', 'none');
 		$('#contacts_block').css('display', 'block');
+		$('#resume_block').css('display', 'none');
+	});
+	$("#resume").click(function() {
+		$('#home_block').css('display', 'none');
+		$('#portfolio_block').css('display', 'none');
+		$('#projects_block').css('display', 'none');
+		$('#contacts_block').css('display', 'none');
+		$('#resume_block').css('display', 'block');
 	});
 	/* === Выполнить функцию AJAX при клике на элементе === */
 	$(".submit").click(function() {
