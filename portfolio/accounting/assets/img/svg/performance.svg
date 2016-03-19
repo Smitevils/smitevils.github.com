@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="469.7 -72 1004.9 159" style="enable-background:new 469.7 -72 1004.9 159;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#000000;stroke-miterlimit:10;}
+	.st1{fill:none;stroke:#000000;stroke-miterlimit:10;stroke-dasharray:4,2;}
+</style>
+<g id="horizontal-lines">
+	<line id="line-1" class="st0" x1="484" y1="8" x2="727" y2="8"/>
+	<line id="line-2" class="st0" x1="1212" y1="8" x2="1455" y2="8"/>
+	<line id="line-3" class="st0" x1="969.5" y1="8" x2="1212.5" y2="8"/>
+	<line id="line-4" class="st0" x1="726.5" y1="8" x2="969.5" y2="8"/>
+</g>
+<g id="vertical-lines">
+	<line id="v-line-2" class="st1" x1="484" y1="-71.5" x2="484" y2="8.5"/>
+	<line id="v-line-3" class="st0" x1="726.5" y1="7.5" x2="726.5" y2="87.5"/>
+	<line id="v-line-1_2_" class="st0" x1="969.5" y1="-72" x2="969.5" y2="8"/>
+	<line id="v-line-4" class="st0" x1="1212" y1="8" x2="1212" y2="88"/>
+	<line id="v-line-5" class="st0" x1="1455" y1="-71.9" x2="1455" y2="8.5"/>
+</g>
+<g id="dots">
+	<circle id="dot-1" cx="486" cy="7.8" r="5"/>
+	<circle id="dot-2" cx="726.5" cy="7.8" r="5"/>
+	<circle id="dot-3" cx="969.5" cy="8" r="5"/>
+	<circle id="dot-4" cx="1212" cy="8" r="5"/>
+	<circle id="dot-5" cx="1452.5" cy="7.5" r="5"/>
+</g>
+<line class="st0" x1="469.7" y1="-65.5" x2="469.7" y2="87"/>
+</svg>
