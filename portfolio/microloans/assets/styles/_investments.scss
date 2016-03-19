@@ -1,0 +1,329 @@
+.investments {}
+
+.investments-row {
+	height: 352px;
+	&.left-padding {padding-left: 20%;}
+}
+
+.investments-row.left-padding .investments-column {width: 25%;}
+
+.investments-column {
+	width: 20%; height: 100%; float: left;
+}
+
+.investments-title-img-block {
+	width: 100%; height: 100%;
+	background: url(../img/bg/invest-title.jpg) no-repeat center;
+	background-size: cover;
+	position: relative;
+	//
+	&:before {
+		content: "";
+		width: 100px; height: 100px;
+		display: block;
+		position: absolute;
+		top: 0; left: 0; right: 0; bottom: 0; margin: auto;
+		background: url(../img/icons/money.png) no-repeat center;
+		background-size: contain;
+	}
+	&:after {
+		content: "";
+		width: 12px; height: 36px;
+		display: block;
+		position: absolute;
+		right: -11px;
+		top: 50%; margin-top: -18px;
+		background: url(../img/icons/invest-title-arrow.png) no-repeat center;
+		background-size: contain;
+	}
+}
+.investments-title-block {
+	width: 80%; height: 100%; float: left;
+	padding-left: 60px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	//
+	.investments-title-wrap {
+		h1, p {
+			@include MyriadProBold;
+			color: $bg-14;
+			text-transform: uppercase;
+			margin: 10px 0;
+		}
+		h1 {font-size: 24px;}
+		p {font-size: 36px;}
+	}
+}
+
+.investments-number {
+	@include MyriadProBold;
+	font-weight: 100;
+	color: $bg-14;
+	font-size: 160px;
+	position: absolute;
+	left: -10px; top: -74px;
+}
+
+.why-block {
+	width: 100%; height: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: flex-start;
+	overflow: hidden;
+	position: relative;
+	//
+	&.gray {
+		background: $bg-10;
+		color: white;
+		//
+		.investments-number {color: rgba(202,82,99,0.3);}
+		//
+		.why-block-content {
+			width: 80%;
+			text-align: center;
+			//
+			h2 {
+				@include MyriadProBold;
+				font-size: 20px;
+				text-transform: uppercase;
+				margin: 80px 0 40px 0;
+			}
+			p {
+				@include MyriadProRegular;
+				color: $f-23;
+				font-size: 16px;
+			}
+		}
+	}
+	&.white {
+		background: white;
+		color: $f-22;
+		//
+		.investments-number {color: rgba(202,82,99,0.15);}
+		//
+		.why-block-content {
+			width: 80%;
+			text-align: center;
+			//
+			h2 {
+				@include MyriadProBold;
+				font-size: 20px;
+				text-transform: uppercase;
+				margin: 80px 0 40px 0;
+				color: #3b3d47;
+			}
+			p {
+				@include MyriadProRegular;
+				color: $f-24;
+				font-size: 16px;
+			}
+		}
+	}
+	//
+	&.bg-1 {
+		background: url(../img/bg/invest-bg-1.jpg) no-repeat center;
+		background-size: cover;
+	}
+	&.bg-2 {
+		background: url(../img/bg/invest-bg-2.jpg) no-repeat center;
+		background-size: cover;
+	}
+}
+
+.investments-pluses-block {
+	width: 80%; height: 100%; float: left;
+	padding: 0 6%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	background: #999;
+	background: url(../img/bg/invest-bg.jpg) no-repeat center;
+	background-size: cover;
+}
+
+.investments-pluses-block-content {
+	width: 100%; height: 100%;
+}
+
+.investments-pluses-title-questions {
+	width: 100%; height: 100%;
+	background: white;
+	position: relative; float: left;
+	display: flex;
+	flex-direction: center;
+	align-items: center;
+	&:before {
+		content: "";
+		display: block;
+		position: absolute;
+		top: 50%;
+		margin-top: -9px;
+		left: -10px;
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 18px 10px 18px 0px;
+		border-color: transparent #fff transparent transparent;
+	}
+	//
+	p {
+		@include MyriadProBold;
+		color: $f-19;
+		font-size: 30px;
+		padding: 80px;
+	}
+}
+
+.investments-pluses-block.question .investments-column {
+	width: 25%;
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+	align-items: center;
+}
+
+.investments-plus {
+	color: white;
+	width: 80%; min-height: 200px;
+	text-align: center;
+	span {
+		img {
+			width: auto; height: 50px;
+
+		}
+	}
+	//
+	h3 {
+		@include MyriadProBold;
+		font-size: 20px;
+		text-transform: uppercase;
+	}
+	p {
+		@include MyriadProRegular;
+		font-size: 16px;
+	}
+}
+
+.investments__about-text-container {
+	width: 100%; padding-left: 30%;
+	position: relative; padding-top: 40px; padding-bottom: 40px;
+	img {
+		width: 100px; height: 100px; position: absolute; left: 15%; top: 50%; margin-top: -50px; margin-left: -50px;
+	}
+	h2 {
+		@include MyriadProBold;
+		font-size: 26px;
+		text-transform: uppercase;
+		color: $f-18;
+	}
+	p {
+		@include MyriadProRegular;
+		font-size: 18px;
+		color: $f-17;
+		//
+		strong {@include MyriadProBold;}
+	}
+}
+
+.investments__steps-title {
+	width: 100%; height: 100%;
+	background: $bg-7;
+	position: relative; float: left;
+	display: flex;
+	flex-direction: center;
+	align-items: center;
+	padding: 100px 70px;
+	@include MyriadProRegular;
+	font-size: 30px;
+	text-transform: uppercase;
+	color: white;
+}
+
+.investments__steps-title:after {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 50%; margin-top: -9px;
+	right: -10px;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 18px 0 18px 10px;
+	border-color: transparent transparent transparent $bg-7;
+}
+
+.investments-steps-block {
+	width: 80%; height: 100%; float: left;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	//
+	.step-block {
+		text-align: center;
+		display: inline-block;
+		position: relative;
+		text-align: center;
+		min-height: 204px; max-width: 170px;
+		//
+		:before {
+			content: "";
+			display: block;
+			width: 16px;
+			height: 28px;
+			position: absolute;
+			top: 50%; margin-top: -14px;
+			right: -30px;
+			background: url(../img/icons/step-arrow.png) no-repeat center;
+			background-size: contain;
+		}
+		//
+		img {
+			height: 80px; width: auto;
+		}
+		//
+		p {
+			@include MyriadProBold;
+			font-size: 18px; margin: 0 auto; padding-top: 20px; padding-bottom: 20px;
+			color: $f-17;
+			text-transform: uppercase;
+		}
+	}
+}
+
+.investments-steps-block .investments-column {
+	width: 25%;
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+	align-items: center;
+}
+
+.investments_container-for-btn {
+	height: 166px;
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+	align-items: center;
+}
+
+.investments__request-btn {
+	display: inline-block;
+	@include MyriadProBold;
+	color: white;
+	background: #ca5263;
+	border-radius: 18px;
+	font-size: 14px;
+	border: 2px solid #ca5263;
+	padding: 10px 24px;
+	outline: none;
+	text-transform: uppercase;
+	cursor: pointer;
+	letter-spacing: 2px;
+	line-height: 20px;
+	&:hover {
+		background: #a23b4a;
+		border: 2px solid #a23b4a;
+	}
+}

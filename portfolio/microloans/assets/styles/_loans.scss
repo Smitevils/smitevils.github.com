@@ -1,0 +1,169 @@
+.loans {}
+
+.loans__tabs {
+	margin-right: 0;
+	//
+	.row {margin: 0;}
+	.col-md-2 {padding: 0;}
+}
+
+.loans__tab {
+	height: 280px;
+	cursor: pointer;
+}
+
+.loans__tab-icon {
+	width: 100%;
+	height: 150px;
+	background-color: #666;
+}
+.loans__tab-text {
+	text-transform: uppercase;
+	font-size: 18px;
+	padding: 0 50px;
+	@include MyriadProBold;
+	font-weight: 100;
+	letter-spacing: 2px;
+	//
+	h2 {
+		margin: 0; padding: 0;
+		font-size: 18px;
+	}
+}
+.loans__tab-text.white {
+	color: white;
+}
+.loans__tab-text.gray {
+	color: $f-21;
+}
+
+.loans__tab-1 .loans__tab-icon {background: url(../img/icons/loans-tab-1.png) no-repeat center;}
+.loans__tab-1.active .loans__tab-icon {background: none;}
+.loans__tab-2 .loans__tab-icon {background: url(../img/icons/loans-tab-2.png) no-repeat center;}
+.loans__tab-2.active .loans__tab-icon {background: none;}
+.loans__tab-3 .loans__tab-icon {background: url(../img/icons/loans-tab-3.png) no-repeat center;}
+.loans__tab-3.active .loans__tab-icon {background: none;}
+.loans__tab-4 .loans__tab-icon {background: url(../img/icons/loans-tab-4.png) no-repeat center;}
+.loans__tab-4.active .loans__tab-icon {background: none;}
+.loans__tab-5 .loans__tab-icon {background: url(../img/icons/loans-tab-5.png) no-repeat center;}
+.loans__tab-5.active .loans__tab-icon {background: none;}
+.loans__tab-6 .loans__tab-icon {background: url(../img/icons/loans-tab-6.png) no-repeat center;}
+.loans__tab-6.active .loans__tab-icon {background: none;}
+
+.loans__tab-1.active {background: url(../img/bg/loans-tab-active.png) no-repeat center $bg-7;background-size: cover;}
+.loans__tab-2.active {background: url(../img/bg/loans-tab-active.png) no-repeat center $bg-5;background-size: cover;}
+.loans__tab-3.active {background: url(../img/bg/loans-tab-active.png) no-repeat center $bg-2;background-size: cover;}
+.loans__tab-4.active {background: url(../img/bg/loans-tab-active.png) no-repeat center $bg-15;background-size: cover;}
+.loans__tab-5.active {background: url(../img/bg/loans-tab-active.png) no-repeat center $bg-3;background-size: cover;}
+.loans__tab-6.active {background: url(../img/bg/loans-tab-active.png) no-repeat center white;background-size: cover;}
+
+.loans__tab.active:before {
+	content: "";
+	position: absolute;
+	bottom: -12px;
+	left: 50%;
+	margin-left: -18px;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 12px 18px 0 18px;
+	border-color: transparent transparent transparent transparent;
+}
+.loans__tab.active:after {
+	content: "";
+	position: absolute;
+	bottom: -12px;
+	left: 50%;
+	margin-left: -18px;
+	width: 36px;
+	height: 12px;
+	background: url(../img/bg/loans-tab-active-triangle.png) no-repeat center;background-size: cover;
+}
+
+//loans-tab-1.png loans-tab-active-full.png
+
+.loans__tab-1.active:before {border-color: $bg-7 transparent transparent transparent;}
+.loans__tab-2.active:before {border-color: $bg-5 transparent transparent transparent;}
+.loans__tab-3.active:before {border-color: $bg-2 transparent transparent transparent;}
+.loans__tab-4.active:before {border-color: $bg-15 transparent transparent transparent;}
+.loans__tab-5.active:before {border-color: $bg-3 transparent transparent transparent;}
+.loans__tab-6.active:before {border-color: $bg-1 transparent transparent transparent;}
+
+//loans-tab-active-triangle.png
+
+.loans__tab-1 {background-color: $bg-7;}
+.loans__tab-2 {background-color: $bg-5;}
+.loans__tab-3 {background-color: $bg-2;}
+.loans__tab-4 {background-color: $bg-15;}
+.loans__tab-5 {background-color: $bg-3;}
+.loans__tab-6 {background-color: $bg-1;}
+
+.loans__content-tabs {
+	text-align: center;
+	color: $f-19;
+	margin-right: 0;
+	padding-bottom: 80px;
+	.row {margin: 0;}
+	.col-md-10 {padding: 0; padding-left: 40px;}
+	//
+	h1 {
+		text-align: center;
+		text-transform: uppercase;
+		@include MyriadProBold;
+		font-size: 30px;
+		margin: 0; padding: 80px 0;
+	}
+}
+
+.loans__table {
+	table {
+		width: 100%;
+		@include MyriadProBold;
+		font-weight: 100;
+		margin-bottom: 60px;
+		//
+		tr {
+			border-bottom: 2px solid $bg-16;
+			//
+			td, th {width: 50%; text-align: left;}
+			th {
+				padding: 8px 0 14px 0;
+				font-size: 14px;
+				color: $f-20;
+				text-transform: uppercase;
+			}
+			td {
+				padding: 34px 0 12px 0;
+				font-size: 18px;
+				text-transform: uppercase;
+			}
+			th:first-child, td:first-child {
+				border-right: 2px solid $bg-16;
+			}
+			th:last-child, td:last-child {
+				padding-left: 10px;
+			}
+		}
+	}
+}
+
+.loans__request-btn {
+	display: inline-block;
+	@include MyriadProBold;
+	color: white;
+	background: #ca5263;
+	border-radius: 18px;
+	font-size: 14px;
+	border: 2px solid #ca5263;
+	padding: 10px 24px;
+	outline: none;
+	text-transform: uppercase;
+	cursor: pointer;
+	letter-spacing: 2px;
+	line-height: 20px;
+	&:hover {
+		background: #a23b4a;
+		border: 2px solid #a23b4a;
+	}
+}
+

@@ -1,0 +1,1480 @@
+header {
+	height: 80px;
+	background-color: $bg-1;
+	font-size: 0;
+	z-index: 999999;
+}
+.header__logo-container {
+	width: 15%; height: 100%;
+	display: inline-block;
+	vertical-align: top;
+	text-align: center;
+	//
+	line-height: 80px;
+	//
+	img[alt="logo"] {display: inline-block; width: 80%; height: auto;}
+	img[alt="logo-mini"] {display: none;}
+}
+.header__menu-container {
+	width: 40%; height: 100%;
+	display: inline-block;
+	vertical-align: top;
+	line-height: 80px;
+	//
+	ul {
+		display: inline-block;
+		list-style: none;
+		padding: 0;
+		font-size: 0; // убираем отступы между элементами li
+		//
+		li {
+			display: inline-block;
+			padding-right: 40px;
+			&:first-child {padding-left: 25px;}
+			&:last-child {padding-right: 25px;}
+			//
+			a {
+				@include MyriadProBold;
+				font-weight: bold;
+				color: $f-1;
+				font-size: 12px;
+				font-weight: 100;
+				letter-spacing: 2px;
+				text-transform: uppercase;
+				text-decoration: none;
+				//
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+}
+.header__calculator-container {
+	display: inline-block;
+	vertical-align: top;
+	width: 21%; height: 100%;
+	vertical-align: top;
+	background-color: #65666e;
+}
+.header__calculator-button {
+	@include InlineFlex;
+	@include JustifyContent;
+	@include AlignItemsCenter;
+	@include userSelectNone;
+	width: 50%; height: 100%;
+	background-color: $bg-3;
+	cursor: pointer;
+	text-transform: uppercase;
+	//
+	p {
+		@include MyriadProBold;
+		font-weight: 100;
+		color: $f-2;
+		font-size: 14px; margin: 0; padding: 0 20%;
+	}
+}
+.header__calculator-button.active {
+	background-color: $bg-4;
+	//
+	& p {
+		color: $f-3;
+	}
+}
+.header__calculator-block {
+	width: 300px; min-height: 300px;
+	position: absolute;
+	z-index: 9999;
+	display: table;
+	background-color: rgba(46,48,55,0.7);
+	color: #fff;
+	padding: 50px;
+	box-sizing: border-box;
+}
+#calculator-1, #calculator-2 {display: none; overflow: hidden;}
+
+// calculator content
+.calculator-content {
+	font-size: 14px;
+	display: table-cell;
+	width: 100%; height: 100%;
+	text-align: center;
+	vertical-align: middle;
+	color: $f-6;
+	//
+	a {color: $f-6;}
+	//
+	h1 {
+		@include MyriadProBold;
+		font-weight: 100;
+		font-size: 24px;
+		letter-spacing: 3px;
+		text-transform: uppercase;
+		margin: 0px;
+	}
+	span {
+		@include MyriadProBold;
+		font-size: 14px;
+		text-transform: uppercase;
+		font-weight: 800;
+	}
+}
+.calculator-first-content__switch-container {
+	vertical-align: middle;
+	padding: 40px 0;
+	//
+	span {margin: 0 10px; line-height: 40px; vertical-align: middle;}
+}
+.calculator__tabs-container {
+	margin: 20px 0;
+	//
+	ul {
+		display: table; list-style: none; padding: 0;
+		width: 100%;
+		//
+		li {
+			display: table-cell;
+			width: 25%;
+		}
+	}
+	//
+}
+.calculator__tab {
+	cursor: pointer;
+	text-align: center;
+	//
+	p {
+		@include MyriadProRegular; margin: 0; padding: 0;
+		font-size: 12px;
+		color: $f-7;
+		@include transition-03s;
+	}
+	&.active {
+		//
+		p {
+			color: $f-8;
+		}
+	}
+}
+
+#calculator-1 .first-calculator__phisic-faces .calculator__tabs-container .tab-1 {
+	p {
+		&:before {
+			content: '';
+			display: block;
+			width: 100%; height: 50px;
+			background: url(../img/icons/tab-text-white.png) no-repeat center;
+			background-size: 28px 30px;
+		}
+	}
+	&.active {
+		p {
+			&:before {
+				background: url(../img/icons/tab-text-red.png) no-repeat center;
+				background-size: 28px 30px;
+			}
+		}
+	}
+}
+
+#calculator-1 .first-calculator__phisic-faces .calculator__tabs-container .tab-2 {
+	p {
+		&:before {
+			content: '';
+			display: block;
+			width: 100%; height: 50px;
+			background: url(../img/icons/tab-target-white.png) no-repeat center;
+			background-size: 32px 30px;
+		}
+	}
+	&.active {
+		p {
+			&:before {
+				background: url(../img/icons/tab-target-red.png) no-repeat center;
+				background-size: 32px 30px;
+			}
+		}
+	}
+}
+
+#calculator-1 .first-calculator__phisic-faces .calculator__tabs-container .tab-3 {
+	p {
+		&:before {
+			content: '';
+			display: block;
+			width: 100%; height: 50px;
+			background: url(../img/icons/tab-coins-white.png) no-repeat center;
+			background-size: 32px 30px;
+		}
+	}
+	&.active {
+		p {
+			&:before {
+				background: url(../img/icons/tab-coins-red.png) no-repeat center;
+				background-size: 32px 30px;
+			}
+		}
+	}
+}
+
+#calculator-1 .first-calculator__phisic-faces .calculator__tabs-container .tab-4 {
+	p {
+		&:before {
+			content: '';
+			display: block;
+			width: 100%; height: 50px;
+			background: url(../img/icons/tab-mb-white.png) no-repeat center;
+			background-size: 32px 32px;
+		}
+	}
+	&.active {
+		p {
+			&:before {
+				background: url(../img/icons/tab-mb-red.png) no-repeat center;
+				background-size: 32px 32px;
+			}
+		}
+	}
+}
+/**/
+#calculator-1 .first-calculator__legal-faces .calculator__tabs-container .tab-1 {
+	p {
+		&:before {
+			content: '';
+			display: block;
+			width: 100%; height: 50px;
+			background: url(../img/icons/tab-target-white.png) no-repeat center;
+			background-size: 32px 30px;
+		}
+	}
+	&.active {
+		p {
+			&:before {
+				background: url(../img/icons/tab-target-red.png) no-repeat center;
+				background-size: 32px 30px;
+			}
+		}
+	}
+}
+
+#calculator-1 .first-calculator__legal-faces .calculator__tabs-container .tab-2 {
+	p {
+		&:before {
+			content: '';
+			display: block;
+			width: 100%; height: 50px;
+			background: url(../img/icons/tab-coins-white.png) no-repeat center;
+			background-size: 32px 30px;
+		}
+	}
+	&.active {
+		p {
+			&:before {
+				background: url(../img/icons/tab-coins-red.png) no-repeat center;
+				background-size: 32px 30px;
+			}
+		}
+	}
+}
+
+#calculator-1 .first-calculator__legal-faces .calculator__tabs-container .tab-3 {
+	p {
+		&:before {
+			content: '';
+			display: block;
+			width: 100%; height: 50px;
+			background: url(../img/icons/tab-mb-white.png) no-repeat center;
+			background-size: 32px 32px;
+		}
+	}
+	&.active {
+		p {
+			&:before {
+				background: url(../img/icons/tab-mb-red.png) no-repeat center;
+				background-size: 32px 32px;
+			}
+		}
+	}
+}
+/* калькулятор заемщика --> для физ. лиц */
+#calculator-2 .borrower-calculator-phisic .calculator__tabs-container .tab-1 {
+	p {
+		&:before {
+			content: '';
+			display: block;
+			width: 100%; height: 50px;
+			background: url(../img/icons/tab-clock-white.png) no-repeat center;
+			background-size: 35px 31px;
+		}
+	}
+	&.active {
+		p {
+			&:before {
+				background: url(../img/icons/tab-clock-red.png) no-repeat center;
+				background-size: 35px 31px;
+			}
+		}
+	}
+}
+
+#calculator-2 .borrower-calculator-phisic .calculator__tabs-container .tab-2 {
+	p {
+		&:before {
+			content: '';
+			display: block;
+			width: 100%; height: 50px;
+			background: url(../img/icons/tab-tower-white.png) no-repeat center;
+			background-size: 32px 35px;
+		}
+	}
+	&.active {
+		p {
+			&:before {
+				background: url(../img/icons/tab-tower-red.png) no-repeat center;
+				background-size: 32px 35px;
+			}
+		}
+	}
+}
+
+#calculator-2 .borrower-calculator-phisic .calculator__tabs-container .tab-3 {
+	p {
+		&:before {
+			content: '';
+			display: block;
+			width: 100%; height: 50px;
+			background: url(../img/icons/tab-auto-white.png) no-repeat center;
+			background-size: 34px 28px;
+		}
+	}
+	&.active {
+		p {
+			&:before {
+				background: url(../img/icons/tab-auto-red.png) no-repeat center;
+				background-size: 34px 28px;
+			}
+		}
+	}
+}
+
+/************************/
+
+#calculator-2 .borrower-calculator-legal .calculator__tabs-container .tab-1 {
+	p {
+		&:before {
+			content: '';
+			display: block;
+			width: 100%; height: 50px;
+			background: url(../img/icons/tab-graph-white.png) no-repeat center;
+			background-size: 36px 29px;
+		}
+	}
+	&.active {
+		p {
+			&:before {
+				background: url(../img/icons/tab-graph-red.png) no-repeat center;
+				background-size: 36px 29px;
+			}
+		}
+	}
+}
+
+#calculator-2 .borrower-calculator-legal .calculator__tabs-container .tab-2 {
+	p {
+		&:before {
+			content: '';
+			display: block;
+			width: 100%; height: 50px;
+			background: url(../img/icons/tab-tie-white.png) no-repeat center;
+			background-size: 14px 40px;
+		}
+	}
+	&.active {
+		p {
+			&:before {
+				background: url(../img/icons/tab-tie-red.png) no-repeat center;
+				background-size: 14px 40px;
+			}
+		}
+	}
+}
+
+#calculator-2 .borrower-calculator-legal .calculator__tabs-container .tab-3 {
+	p {
+		&:before {
+			content: '';
+			display: block;
+			width: 100%; height: 50px;
+			background: url(../img/icons/tab-man-white.png) no-repeat center;
+			background-size: 20px 27px;
+		}
+	}
+	&.active {
+		p {
+			&:before {
+				background: url(../img/icons/tab-man-red.png) no-repeat center;
+				background-size: 20px 27px;
+			}
+		}
+	}
+}
+
+span.calculator_switch {
+	width: 82px; height: 40px; display: inline-block;
+	background-color: rgba(255,255,255,0.35);
+	border-radius: 20px;
+	position: relative; cursor: pointer;
+	//
+	i {
+		position: absolute;
+		display: block;
+		width: 40px;
+		height: 40px;
+		cursor: pointer;
+		border-radius: 20px;
+		@include transition-03s;
+		background: url(../img/icons/switch-btn.png) no-repeat center;
+		background-size: contain;
+		-webkit-box-shadow: 13px 0px 56px 0px rgba(0,0,0,0.75)!important;
+		-moz-box-shadow: 13px 0px 56px 0px rgba(0,0,0,0.75)!important;
+		box-shadow: 13px 0px 56px 0px rgba(0,0,0,0.75);
+		//
+	}
+	&[data-switch-pos="1"] i {
+		left: 0px;
+	}
+	&[data-switch-pos="2"] i {
+		left: 42px;
+	}
+}
+
+.calculator__slider-container {
+	//
+	ul {
+		display: table; width: 100%;
+		padding: 0;
+		//
+		li {display: table-cell;}
+		li:nth-child(1) {
+			//
+			p {
+				width: 30%;
+				@include MyriadProBold;
+				font-weight: 800;
+				font-size: 14px;
+				text-transform: uppercase;
+			}
+		}
+		li:nth-child(2) {width: 40%;}
+		li:nth-child(3) {
+			width: 30%;
+			//
+			p {
+				@include MyriadProRegular;
+				font-size: 14px;
+				font-weight: normal;
+				//
+				span {
+					@include MyriadProBold;
+					font-weight: bold;
+					font-size: 20px;
+				}
+			}
+		}
+	}
+}
+
+.calculator__result {
+	width: 100%;
+	padding: 10px 0 0 0;
+	//
+	ul {
+		width: 100%;
+		display: table;
+		padding-left: 0;
+		//
+		li {
+			display: table-cell;
+			vertical-align: middle;
+		}
+		li:nth-child(1) {width: 20%;}
+		li:nth-child(2) {width: 80%;}
+		li:nth-child(1) {
+			text-align: left;
+			//
+			p {
+				@include MyriadProRegular;
+				font-size: 14px;
+				font-weight: normal;
+				margin: 0;
+			}
+			span {
+				@include MyriadProBold;
+				font-size: 30px;
+				font-weight: bold;
+				//
+				i {
+					@include MyriadProRegular;
+					font-size: 14px;
+					font-weight: normal;
+					font-style: normal;
+					margin: 0 10px;
+				}
+			}
+		}
+		li:nth-child(3) {
+			a {
+				@include MyriadProBold;
+				font-weight: bold;
+				font-size: 16px;
+			}
+		}
+	}
+}
+
+.calculator__result-btn {
+	display: inline-block;
+	padding: 14px 32px;
+	background-color: $bg-5;
+	color: $f-9;
+	font-size: 16px;
+	@include MyriadProBold;
+	font-weight: bold;
+	border-radius: 26px;
+	cursor: pointer;
+	text-transform: uppercase;
+	font-weight: lighter;
+	@include transition-03s;
+	//
+	&:hover {
+		background-color: #A24250;
+
+	}
+}
+
+/* calculator faces block */
+
+.first-calculator__phisic-faces {padding: 0 20px;}
+.first-calculator__legal-faces {padding: 0 20px; display: none;}
+
+/**/
+
+.borrower-calculator-phisic {
+	padding: 0 20px;
+}
+.borrower-calculator-legal {
+	padding: 0 20px;
+	display: none;
+}
+/* noUiSlider theme */
+.nouislider {
+	position: relative;
+	&:before {
+		content: "";
+		width: 100%; height: 10px;
+		position: absolute;
+		left: 0;
+		top: -10px;
+		background: url(../img/icons/dashed.png) repeat-x center;
+	}
+}
+.noUi-origin {
+	top: -3px!important;
+}
+.noUi-horizontal {
+	height: 8px!important;
+}
+.noUi-horizontal .noUi-handle {
+	width: 25px!important;
+	height: 25px!important;
+	left: -17px;
+	top: -6px;
+	border: none;
+	box-shadow: none;
+	background: url(../img/icons/slider-dot.png) no-repeat center;
+	background-size: contain;
+	cursor: pointer;
+	&:before, &:after {display: none;}
+}
+.noUi-handle-lower {
+	-webkit-box-shadow: 21px 0px 37px -6px rgba(0,0,0,0.75)!important;
+	-moz-box-shadow: 21px 0px 37px -6px rgba(0,0,0,0.75);
+	box-shadow: 21px 0px 37px -6px rgba(0,0,0,0.75);
+}
+.nouislider-under-value {
+	position: absolute;
+	width: 200px;
+	text-align: center;
+	margin-left: -100px; top: -20px;
+	@include MyriadProRegular;
+	font-size: 14px!important;
+	font-weight: 100!important;
+}
+/* /noUiSlider theme */
+
+
+//
+.header__phone-cabinet-container {
+	display: inline-block;
+	vertical-align: top;
+	width: 24%; height: 100%;
+	background-color: $bg-2;
+	position: relative;
+	//
+	.header__admin-window {
+		display: none;
+		opacity: 0;
+		position: absolute;
+		width: 100%; min-height: 100px;
+		background-color: $bg-2;
+		margin-top: 80px;
+		z-index: 9999;
+		text-align: center;
+		border-top: 1px solid #65666e;
+		@include transition-03s;
+		//
+		&.open {display: block; opacity: 1;}
+		//
+		.header__admin-window-content {
+			display: none;
+		}
+		.header__admin-window-content.login.open {display: inline-block;}
+		.header__admin-window-content.register.open {display: inline-block;}
+		.header__admin-window-content {
+			width: 60%;
+			text-align: left;
+			display: none;
+			z-index: 9999;
+			padding: 40px 0;
+			//
+			input[type="text"], input[type="password"] {
+				width: 100%;
+				padding: 6px 20px;
+				background: transparent;
+				border: 2px solid $bg-11;
+				border-radius: 15px;
+				@include MyriadProRegular;
+				font-size: 14px;
+				color: white;
+				outline: none;
+				margin-bottom: 12px;
+				@include transition-03s;
+			}
+			input[type="text"].error, input[type="password"].error {
+				border: 2px solid $bg-12;
+			}
+
+			input[type="text"].valid, input[type="password"].valid {
+				border: 2px solid $bg-13;
+			}
+			input[type="text"]::-webkit-input-placeholder {color: white;}
+			input[type="text"]:-moz-placeholder {color: white;}
+			input[type="text"]::-moz-placeholder {color: white;}
+			input[type="text"]:-ms-input-placeholder {color: white;}
+
+			input[type="password"]::-webkit-input-placeholder {color: white;}
+			input[type="password"]:-moz-placeholder {color: white;}
+			input[type="password"]::-moz-placeholder {color: white;}
+			input[type="password"]:-ms-input-placeholder {color: white;}
+
+			input[type="submit"] {
+				@include MyriadProRegular;
+				color: white;
+				background: $bg-5;
+				border-radius: 25px;
+				font-size: 14px;
+				border: 2px solid $bg-5;
+				padding: 10px 26px;
+				outline: none;
+				margin-right: 20px;
+				//
+				&:hover {
+					background: $bg-7;
+					border: 2px solid $bg-7;
+				}
+			}
+			a {
+				@include MyriadProRegular;
+				font-size: 14px;
+				color: $f-16;
+				text-decoration: underline;
+				//
+				&:hover {color: white;}
+			}
+		}
+	}
+}
+.header__phone-container {
+	@include InlineFlex;
+	@include JustifyContent;
+	@include AlignItemsCenter;
+	vertical-align: top;
+	width: 80%; height: 100%;
+	//
+	a {
+		@include MyriadProBold;
+		font-size: 18px;
+		line-height: 26px;
+		color: $f-4;
+		vertical-align: middle;
+		text-decoration: none;
+		font-weight: 100;
+		&:hover {text-decoration: none;}
+		&:before {
+			@include transition-03s;
+			content: "";
+			// position: absolute;
+			// top: 0; left: 0;
+			margin-right: 10px;
+			display: inline-block;
+			vertical-align: middle;
+			width: 26px; height: 26px;
+			background: url(../img/icons/red-circle-phone.png) no-repeat center;
+			background-size: contain;
+		}
+		&:hover:before {
+			@include rotate360;
+		}
+	}
+}
+.header__cabinet-container {
+	@include InlineFlex;
+	@include JustifyContent;
+	@include AlignItemsCenter;
+	vertical-align: top;
+	width: 20%; height: 100%;
+	cursor: pointer;
+}
+.header__cabinet-button {
+	@include MyriadProRegular;
+	font-size: 12px;
+	color: $f-5;
+	text-align: center;
+	position: relative;
+	margin-top: 22px;
+	cursor: pointer;
+	@include userSelectNone;
+	&:before {
+		content: "";
+		position: absolute;
+		top: -22px; left: 50%;
+		width: 14px; height: 18px;
+		margin-left: -7px;
+		background: url(../img/icons/human.png) no-repeat center;
+		background-size: contain;
+	}
+}
+
+.header__hamburger {
+	display: none;
+	vertical-align: top;
+	float: right;
+	cursor: pointer;
+	width: 10%; height: 100%;
+	background: url(../img/icons/menu48.png) no-repeat center;
+}
+
+/******************************* main *************************************/
+
+main {
+	width: 100%; //height: 2000px;
+	position: relative;
+}
+
+.bid-call-btn {
+	display: block;
+	position: absolute;
+	z-index: 1000;
+	left: 0; top: 0;
+	width: 80px; height: 80px;
+	background-color: $bg-2;
+	cursor: pointer;
+	@include InlineFlex;
+	@include JustifyContent;
+	@include AlignItemsCenter;
+	@include userSelectNone;
+	padding: 20px;
+	//
+	p {
+		text-align: center;
+		@include MyriadProRegular;
+		font-size: 10px;
+		font-weight: 100;
+		text-transform: uppercase;
+		color: $f-10;
+		//
+		&:before {
+			content: "";
+			display: inline-block;
+			width: 100%; height: 24px;
+			background: url(../img/icons/phone.png) no-repeat center;
+		}
+	}
+	//
+	&:hover p:before {
+		animation: animationFrames linear 1s;
+		animation-iteration-count: 1;
+		transform-origin: 50% 50%;
+		-webkit-animation: animationFrames linear 1s;
+		-webkit-animation-iteration-count: 1;
+		-webkit-transform-origin: 50% 50%;
+		-moz-animation: animationFrames linear 1s;
+		-moz-animation-iteration-count: 1;
+		-moz-transform-origin: 50% 50%;
+		-o-animation: animationFrames linear 1s;
+		-o-animation-iteration-count: 1;
+		-o-transform-origin: 50% 50%;
+		-ms-animation: animationFrames linear 1s;
+		-ms-animation-iteration-count: 1;
+		-ms-transform-origin: 50% 50%;
+	}
+	// скрытый блок заказа звонка
+	.call-bid-block {
+		position: absolute; left: 80px; top: 0;
+		height: 100%; width: 0px; background-color: $bg-2;
+		text-align: center;
+		cursor: auto;
+		overflow: hidden; opacity: 0;
+		@include transition-03s;
+		//
+		&.open {width: 450px; opacity: 1;}
+		//
+		.call-bid-block-content {
+			display: inline-block; padding-top: 20px; width: 422px;
+			//
+			input[type="text"] {
+				width: 140px;
+				padding: 6px 20px;
+				background: transparent;
+				border: 2px solid $bg-11;
+				border-radius: 15px;
+				@include MyriadProRegular;
+				font-size: 13px;
+				color: white;
+				outline: none;
+				margin-right: 12px;
+				@include transition-03s;
+			}
+			input[type="text"].error {
+				border: 2px solid $bg-12;
+			}
+			input[type="text"].valid {
+				border: 2px solid $bg-13;
+			}
+			input[type="text"]::-webkit-input-placeholder {color: white;}
+			input[type="text"]:-moz-placeholder {color: white;}
+			input[type="text"]::-moz-placeholder {color: white;}
+			input[type="text"]:-ms-input-placeholder {color: white;}
+			input[type="submit"] {
+				@include MyriadProRegular;
+				color: white;
+				background: $bg-5;
+				border-radius: 15px;
+				font-size: 14px;
+				border: 2px solid $bg-5;
+				padding: 6px 20px;
+				outline: none;
+				//
+				&:hover {
+					background: $bg-7;
+					border: 2px solid $bg-7;
+				}
+			}
+			button[type="submit"] {
+				@include MyriadProRegular;
+				color: white;
+				background: $bg-5;
+				border-radius: 15px;
+				font-size: 14px;
+				border: 2px solid $bg-5;
+				padding: 6px 20px;
+				outline: none;
+				//
+				&:hover {
+					background: $bg-7;
+					border: 2px solid $bg-7;
+				}
+			}
+		}
+	}
+}
+
+/* Slider */
+
+.slider-container {
+	padding-left: 80px;
+	width: 100%;
+	height: 724px;
+	position: relative;
+}
+
+#slider-fade {
+	position: relative; width: 100%; height: 100%;
+	//
+	.slide {
+		width: 100%; height: 724px;
+		outline: none!important;
+	}
+	.slide-1 {
+		background: url(../img/slider/slide-1.jpg) no-repeat center;
+		background-size: cover;
+	}
+	.slide-2 {
+		background: url(../img/slider/slide-2.jpg) no-repeat center;
+		background-size: cover;
+	}
+	.slide-3 {
+		background: url(../img/slider/slide-3.jpg) no-repeat center;
+		background-size: cover;
+	}
+}
+
+.slider-text-box {
+	width: 286px; height: 262px;
+	background-color: $bg-6;
+	position: absolute;
+	z-index: 99999;
+	bottom: 0; left: 0;
+	padding: 44px;
+	color: $f-11;
+	//
+	h1 {
+		@include MyriadProRegular;
+		font-weight: 800;
+		font-size: 30px;
+		width: 100%;
+		text-transform: uppercase;
+		margin: 0; padding: 0;
+		margin: 5px 0;
+	}
+	h3 {
+		@include MyriadProRegular;
+		font-weight: 800;
+		font-size: 30px;
+		width: 100%;
+		text-transform: uppercase;
+		margin: 0; padding: 0;
+		margin: 5px 0;
+	}
+	p {
+		@include MyriadProRegular;
+		width: 100%;
+		font-size: 16px;
+		margin: 5px 0;
+	}
+}
+.slider-rext-box-btn {
+	display: inline-block;
+	border: 1px solid #b5b7c0;
+	@include MyriadProRegular;
+	text-transform: uppercase;
+	font-size: 12px;
+	font-weight: 800;
+	padding: 12px 28px;
+	cursor: pointer;
+	margin: 5px 0;
+	&:hover {
+		background-color: rgba(0,0,0,0.05);
+	}
+}
+
+.slider-nav-container {
+	position: absolute;
+	top: -70px; left: 0;
+	width: 140px; height: 70px;
+}
+
+.slider-nav-btn-left {
+	width: 50%; height: 100%;
+	cursor: pointer;
+	float: left;
+	background-color: $bg-2;
+	position: relative;
+	@include transition-03s;
+	//
+	&:after {
+		@include transition-03s;
+		content: "";
+		width: 14px; height: 26px;
+		position: absolute;
+		top: 0; left: 0; right: 0; bottom: 0; margin: auto;
+		display: block;
+		background: url(../img/icons/slider-nav-arrow-left.png) no-repeat center;
+		background-size: 14px 26px;
+	}
+	&:hover:after {left: -8px;}
+}
+.slider-nav-btn-right {
+	width: 50%; height: 100%;
+	cursor: pointer;
+	float: right;
+	background-color: $bg-7;
+	position: relative;
+	@include transition-03s;
+	//
+	&:after {
+		@include transition-03s;
+		content: "";
+		width: 14px; height: 26px;
+		position: absolute;
+		top: 0; left: 0; right: 0; bottom: 0; margin: auto;
+		display: block;
+		background: url(../img/icons/slider-nav-arrow-right.png) no-repeat center;
+		background-size: 14px 26px;
+	}
+	&:hover:after {right: -6px;}
+}
+
+/************ scheme **************/
+
+.scheme-container {
+	margin-left: 80px; margin-right: 80px;
+	//height: 262px;
+}
+.scheme-step-title-container {
+	display: inline-block;
+	vertical-align: top;
+	position: absolute;
+	background-color: $bg-7;
+	width: 286px;
+	height: 262px;
+	padding: 44px; //coins-ghost.png
+	//
+	&:before {
+		content: "";
+		display: block;
+		position: absolute;
+		top: 0; right: -18px;
+		width: 234px;
+		height: 262px;
+		background: url(../img/icons/red-man.png) no-repeat center;
+		background-size: contain;
+	}
+	//
+	.scheme-step-title-content {
+		position: relative;
+		//
+		h2 {
+			@include MyriadProRegular;
+			font-size: 28px;
+			font-weight: normal;
+			color: $f-6;
+			text-transform: uppercase;
+			margin: 0;
+			//
+			&:before {
+				content: "";
+				display: block;
+				height: 60px;
+				background: url(../img/icons/coins-ghost.png) no-repeat left center;
+				background-size: contain;
+			}
+		}
+	}
+}
+.scheme-steps-wrap {
+	width: 100%;
+	float: right;
+	//
+	.row {margin-left: 286px;}
+}
+.scheme-step-block {
+	width: 100%;
+	height: 262px;
+	@include InlineFlex;
+	@include JustifyContent;
+	@include AlignItemsBottom;
+	//
+	.scheme-step-content {
+		text-align: center;
+		padding-bottom: 30px;
+		position: relative;
+		//
+		&:before {
+			content: "";
+			display: block;
+			width: 16px; height: 27px;
+			position: absolute;
+			top: 40px; right: -30px;
+			background: url(../img/icons/step-arrow.png) no-repeat center;
+			background-size: contain;
+		}
+		//
+		p {
+			@include MyriadProBold;
+			font-size: 16px;
+			color: #464d52;
+			text-transform: uppercase;
+			padding: 10px 0;
+		}
+	}
+}
+
+
+/************ methods **************/
+
+.methods-container {
+	margin-left: 80px; margin-right: 80px;
+}
+
+.methods-steps-wrap {
+	width: 100%;
+	float: right;
+	//
+	.row {margin-left: 286px;}
+}
+.methods-step-title-container {
+	display: inline-block;
+	vertical-align: top;
+	position: absolute;
+	background-color: $bg-10;
+	width: 286px;
+	height: 262px;
+	padding: 44px; //coins-ghost.png
+	//
+	&:after {
+		content: "";
+		display: block;
+		position: absolute;
+		top: 113px; right: -10px;
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 18px 0 18px 10px;
+		border-color: transparent transparent transparent #3b3d47
+	}
+	//
+	.methods-step-title-content {
+		position: relative;
+		padding-top: 24px;
+		//
+		h2 {
+			@include MyriadProRegular;
+			font-size: 28px;
+			color: $f-6;
+			font-weight: normal;
+			text-transform: uppercase;
+			margin: 0;
+		}
+	}
+}
+.methods-step-block {
+	width: 100%;
+	height: 262px;
+	@include InlineFlex;
+	@include JustifyLeft;
+	@include AlignItemsBottom;
+	//
+	.methods-step-content {
+		text-align: center;
+		padding-bottom: 30px;
+		position: relative;
+		//
+		p {
+			@include MyriadProBold;
+			width: 140px;
+			font-size: 16px;
+			color: #464d52;
+			text-transform: uppercase;
+			padding: 10px 0;
+			position: relative;
+			text-align: left;
+		}
+	}
+}
+.methods-step-block.methods-step-1 {
+	//
+	&:after {
+		content: "01";
+		@include MyriadProBold;
+		font-size: 180px;
+		position: absolute;
+		color: #f4dce0;
+		bottom: 0;
+		right: 30px;
+		z-index: -1;
+	}
+}
+.methods-step-block.methods-step-2 {
+	//
+	&:after {
+		content: "02";
+		@include MyriadProBold;
+		font-size: 180px;
+		position: absolute;
+		color: #f4dce0;
+		bottom: 0;
+		right: 30px;
+		z-index: -1;
+	}
+}
+.methods-step-block.methods-step-3 {
+	//
+	&:after {
+		content: "03";
+		@include MyriadProBold;
+		font-size: 180px;
+		position: absolute;
+		color: #f4dce0;
+		bottom: 0;
+		right: 30px;
+		z-index: -1;
+	}
+}
+.methods-step-block.methods-step-4 {
+	//
+	&:after {
+		content: "04";
+		@include MyriadProBold;
+		font-size: 180px;
+		position: absolute;
+		color: #f4dce0;
+		bottom: 0;
+		right: 30px;
+		z-index: -1;
+	}
+}
+
+/************ blocks titles **************/
+
+h3.block-title {
+	@include MyriadProBold;
+	font-size: 36px; margin: 0; padding: 56px 0;
+	color: $f-11;
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+}
+
+/************ benefits **************/
+
+.benefits {
+	padding-left: 80px; margin-right: 80px;
+	background-color: $bg-8;
+	padding-bottom: 60px;
+	//
+	.row {margin-left: 0; margin-right: 0;}
+	//
+	.col-lg-3 {text-align: center; padding: 30px 0;}
+	//
+	i {
+		@include MyriadProBold;
+		font-size: 21px;
+		font-style: normal;
+		color: $f-11;
+		text-transform: uppercase;
+		position: relative;
+		z-index: 0;
+	}
+	//
+	i.first-benefit {
+		//
+		&:before {
+			content: "";
+			display: block;
+			width: 132px; height: 66px;
+			position: absolute;
+			top: -20px; left: -70px;
+			background: url(../img/icons/benefit-1.png) no-repeat center;
+			background-size: 132px 66px;
+			z-index: -1;
+		}
+	}
+	i.second-benefit {
+		//
+		&:before {
+			content: "";
+			display: block;
+			width: 132px; height: 66px;
+			position: absolute;
+			top: -20px; left: -70px;
+			background: url(../img/icons/benefit-2.png) no-repeat center;
+			background-size: 132px 66px;
+			z-index: -1;
+		}
+	}
+	i.third-benefit {
+		//
+		&:before {
+			content: "";
+			display: block;
+			width: 132px; height: 66px;
+			position: absolute;
+			top: -20px; left: -70px;
+			background: url(../img/icons/benefit-3.png) no-repeat center;
+			background-size: 132px 66px;
+			z-index: -1;
+		}
+	}
+	i.fourth-benefit {
+		//
+		&:before {
+			content: "";
+			display: block;
+			width: 132px; height: 66px;
+			position: absolute;
+			top: -20px; left: -80px;
+			background: url(../img/icons/benefit-4.png) no-repeat center;
+			background-size: 132px 66px;
+			z-index: -1;
+		}
+	}
+}
+
+/************ reviews **************/
+
+.reviews {
+	padding-right: 80px; margin-left: 80px;
+	background-color: $bg-8;
+	padding-bottom: 60px;
+}
+
+.reviews__slider-wrap {
+	width: 100%;
+}
+
+#reviews__slider {
+	width: 90%; margin: 0 auto;
+}
+
+.reviews__block {
+	margin: 0 40px;
+	outline: none!important;
+}
+
+.reviews__text {
+	position: relative;
+	padding: 60px 60px;
+	//
+	&:before {
+		content: "";
+		display: block;
+		position: absolute;
+		left: 20px; top: 54px;
+		width: 30px; height: 30px;
+		background: url(../img/icons/quote-left.png) no-repeat center;
+		background-size: contain;
+	}
+	&:after {
+		content: "";
+		display: block;
+		position: absolute;
+		right: 20px; bottom: 54px;
+		width: 30px; height: 30px;
+		background: url(../img/icons/quote-right.png) no-repeat center;
+		background-size: contain;
+	}
+}
+.reviews__header {
+	margin: 0 10px;
+	background-color: $bg-9;
+	border-radius: 28px/35px;
+	height: 64px;
+	line-height: 64px;
+	@include MyriadProRegular;
+	font-size: 18px;
+	color: $f-12;
+	text-transform: uppercase;
+	//
+	img {
+		width: 64px; height: 64px;
+		float: left;
+		border-radius: 50%;
+		margin-right: 20px;
+	}
+}
+
+#reviews__slider .slick-prev, .slick-next {
+	font-size: 0;
+	line-height: 0;
+	position: absolute;
+	top: 0%;
+	display: block;
+	width: 16px;
+	height: 27px;
+	margin-top: 0px;
+	padding: 0;
+	cursor: pointer;
+	color: transparent;
+	border: none;
+	outline: none;
+	background: #000;
+}
+#reviews__slider .slick-next {
+	right: -28px; // -28
+	background: url(../img/icons/slider-arrow-right.png) no-repeat center;
+	background-size: contain;
+}
+#reviews__slider .slick-prev {
+	left: -28px;
+	background: url(../img/icons/slider-arrow-left.png) no-repeat center;
+	background-size: contain;
+}
+
+/************ footer **************/
+
+footer {
+	background-color: $bg-10; padding: 0 80px;
+	color: $f-13;
+	//
+	.footer-content {
+		padding: 20px 0;
+	}
+	//
+	.footer-underline {
+		border-top: 1px solid #444650;
+		//
+		p {
+			@include MyriadProBold;
+			font-size: 14px;
+		}
+		//
+		p:first-child {
+			float: left;
+		}
+		p:last-child {
+			float: right;
+		}
+	}
+	//
+	address {
+		font-style: normal;
+	}
+	ul {
+		padding-left: 0; list-style: none;
+		li {
+			margin: 5px 0;
+		}
+	}
+	.footer-1-column {
+		h5 {@include MyriadProBold; font-size: 16px; color: $f-14; margin: 15px 0; font-weight: 100;}
+		p {@include MyriadProRegular; font-size: 18px; color: $f-14;}
+		a {
+			@include MyriadProBold; font-size: 18px;
+			color: $f-15;
+			font-weight: 100;
+			//
+			&:hover {text-decoration: none;}
+		}
+	}
+	.footer-2-column, .footer-3-column, .footer-4-column {
+		h4 {
+			@include MyriadProBold; font-size: 18px; font-weight: 100;
+			text-transform: uppercase;
+			color: $f-14;
+			margin: 15px 0;
+		}
+		a {
+			color: #b7b7b7;
+			@include MyriadProRegular;
+			font-size: 14px;
+			//
+			&:hover {text-transform: none;}
+		}
+	}
+	.footer-3-column ul li {width: 44%; padding-right: 2%; float: left;}
+}
+
+.calculator__sliders-wrap {
+	background-color: rgba(33,44,55,0.0);
+}

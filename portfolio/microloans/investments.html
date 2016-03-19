@@ -1,0 +1,1204 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Сервис Микрозаймов</title>
+	<!-- Meta Data / Мета данные -->
+	<meta name="description" content="Микрозаймы" />
+	<meta name="keywords" content="Микрозаймы, Займы, Деньги" />
+	<!-- Styles / Стили -->
+	<link rel="stylesheet" type="text/css" href="assets/styles/style.css">
+	<link rel="stylesheet" type="text/css" href="assets/styles/animate.css">
+	<!-- noUiSlider -->
+	<link rel="stylesheet" type="text/css" href="assets/plugins/noUiSlider.8.0.2/nouislider.min.css">
+	<!-- Slick Slider -->
+	<link rel="stylesheet" type="text/css" href="assets/plugins/slick/slick.css">
+	<!-- Favicon -->
+	<link rel="apple-touch-icon" sizes="57x57" href="assets/img/favicon/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="assets/img/favicon/apple-touch-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="assets/img/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="assets/img/favicon/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="assets/img/favicon/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="assets/img/favicon/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="assets/img/favicon/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="assets/img/favicon/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon/apple-touch-icon-180x180.png">
+	<link rel="icon" type="image/png" href="assets/img/favicon/favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="assets/img/favicon/favicon-194x194.png" sizes="194x194">
+	<link rel="icon" type="image/png" href="assets/img/favicon/favicon-96x96.png" sizes="96x96">
+	<link rel="icon" type="image/png" href="assets/img/favicon/android-chrome-192x192.png" sizes="192x192">
+	<link rel="icon" type="image/png" href="assets/img/favicon/favicon-16x16.png" sizes="16x16">
+	<link rel="manifest" href="/assets/img/faviconmanifest.json">
+	<link rel="mask-icon" href="assets/img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="msapplication-TileImage" content="assets/img/favicon/mstile-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+</head>
+<body>
+	<header class="clearfix">
+		<div class="header__logo-container clearfix">
+			<a href="index.html">
+				<img src="assets/img/logos/Inkasso.svg" alt="logo">
+				<img src="assets/img/logos/Inkasso_mini.svg" alt="logo-mini">
+			</a>
+		</div>
+		<!-- Скрытая кнопка - бутерброд - отображается в мобильной версии -->
+		<div id="hamburher-btn" class="header__hamburger"></div>
+		<div class="header__menu-container clearfix animated">
+			<ul>
+				<li>
+					<a href="aboutus.html">о компании</a>
+				</li>
+				<li>
+					<a href="loans.html">займы</a>
+				</li>
+				<li>
+					<a href="investments.html">инвестиции</a>
+				</li>
+				<li>
+					<a href="news.html">Пресс-центр</a>
+				</li>
+				<li>
+					<a href="contacts.html">Контакты</a>
+				</li>
+			</ul>
+		</div>
+		<div class="header__calculator-container">
+			<div id="calculator-btn-1" class="header__calculator-button">
+				<p>
+					калькулятор инвестора
+				</p>
+			</div>
+			<div id="calculator-btn-2" class="header__calculator-button">
+				<p>
+					калькулятор заемщика
+				</p>
+			</div>
+			<!-- Calculators Blocks -->
+			<div id="calculator-1" class="header__calculator-block">
+				<div id="shooter0" style="position: absolute; top: 0; right: 0; width: 1px; height: 1px;"></div>
+				<div class="calculator-content">
+					<h1>Инвестировать</h1>
+					<div class="calculator-first-content__switch-container">
+						<span>физ. лица</span>
+						<span class="calculator_switch" data-switch-pos="1"><i></i></span>
+						<span>юр. лица</span>
+					</div>
+					<!-- First Calculator - Phisic Faces -->
+					<div class="first-calculator__phisic-faces">
+						<!-- tabs -->
+						<div class="calculator__tabs-container">
+							<ul>
+								<li>
+									<div class="calculator__tab tab-1 active" data-value="1">
+										<p>Ознакомительный</p>
+									</div>
+								</li>
+								<li>
+									<div class="calculator__tab tab-2" data-value="2">
+										<p>Моя цель</p>
+									</div>
+								</li>
+								<li>
+									<div class="calculator__tab tab-3" data-value="3">
+										<p>Ежемесячный доход</p>
+									</div>
+								</li>
+								<li>
+									<div class="calculator__tab tab-4" data-value="4">
+										<p>Максимальный процент</p>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<!-- /tabs -->
+						<!-- calculator__sliders-wrap -->
+						<div class="calculator__sliders-wrap" data-calc-wrap="1">
+							<!-- slider -->
+							<div class="calculator__slider-container">
+								<ul>
+									<li>
+										<p>Инвестиции</p>
+									</li>
+									<li>
+										<div id="CalcInvestor_1_summ" class="nouislider"></div>
+									</li>
+									<li>
+										<p><span id="CalcInvestor_1_summ_value-1">120 000</span> руб.</p>
+									</li>
+								</ul>
+							</div>
+							<!-- /slider -->
+							<!-- slider -->
+							<div class="calculator__slider-container">
+								<ul>
+									<li>
+										<p>период</p>
+									</li>
+									<li>
+										<div id="CalcInvestor_1_time" class="nouislider"></div>
+									</li>
+									<li>
+										<p><span id="CalcInvestor_1_time_value-1">1</span> мес</p>
+									</li>
+								</ul>
+							</div>
+							<!-- /slider -->
+							<!-- result -->
+							<div class="calculator__result">
+								<ul>
+									<li>
+										<p>Вы получите</p>
+										<span id="CalcInvestor_1_result">1 560 780<i>руб.</i></span>
+									</li>
+									<li>
+										<div class="calculator__result-btn">
+											Подробнее
+										</div>
+									</li>
+								</ul>
+							</div>
+							<!-- /result -->
+						</div>
+						<!-- /calculator__sliders-wrap -->
+						<!-- calculator__sliders-wrap -->
+						<div class="calculator__sliders-wrap" data-calc-wrap="2">
+							<!-- slider -->
+							<div class="calculator__slider-container">
+								<ul>
+									<li>
+										<p>Инвестиции</p>
+									</li>
+									<li>
+										<div id="CalcInvestor_2_summ" class="nouislider"></div>
+									</li>
+									<li>
+										<p><span id="CalcInvestor_2_summ_value-1">120 000</span> руб.</p>
+									</li>
+								</ul>
+							</div>
+							<!-- /slider -->
+							<!-- slider -->
+							<div class="calculator__slider-container">
+								<ul>
+									<li>
+										<p>период</p>
+									</li>
+									<li>
+										<div id="CalcInvestor_2_time" class="nouislider"></div>
+									</li>
+									<li>
+										<p><span id="CalcInvestor_2_time_value-1">1</span> мес</p>
+									</li>
+								</ul>
+							</div>
+							<!-- /slider -->
+							<!-- result -->
+							<div class="calculator__result">
+								<ul>
+									<li>
+										<p>Вы получите</p>
+										<span id="CalcInvestor_2_result">1 560 780<i>руб.</i></span>
+									</li>
+									<li>
+										<div class="calculator__result-btn">
+											Подробнее
+										</div>
+									</li>
+								</ul>
+							</div>
+							<!-- /result -->
+						</div>
+						<!-- /calculator__sliders-wrap -->
+						<!-- calculator__sliders-wrap -->
+						<div class="calculator__sliders-wrap" data-calc-wrap="3">
+							<!-- slider -->
+							<div class="calculator__slider-container">
+								<ul>
+									<li>
+										<p>Инвестиции</p>
+									</li>
+									<li>
+										<div id="CalcInvestor_3_summ" class="nouislider"></div>
+									</li>
+									<li>
+										<p><span id="CalcInvestor_3_summ_value-1">120 000</span> руб.</p>
+									</li>
+								</ul>
+							</div>
+							<!-- /slider -->
+							<!-- slider -->
+							<div class="calculator__slider-container">
+								<ul>
+									<li>
+										<p>период</p>
+									</li>
+									<li>
+										<div id="CalcInvestor_3_time" class="nouislider"></div>
+									</li>
+									<li>
+										<p><span id="CalcInvestor_3_time_value-1">1</span> мес</p>
+									</li>
+								</ul>
+							</div>
+							<!-- /slider -->
+							<!-- result -->
+							<div class="calculator__result">
+								<ul>
+									<li>
+										<p>Вы получите</p>
+										<span id="CalcInvestor_3_result">1 560 780<i>руб.</i></span>
+									</li>
+									<li>
+										<div class="calculator__result-btn">
+											Подробнее 
+										</div>
+									</li>
+								</ul>
+							</div>
+							<!-- /result -->
+						</div>
+						<!-- /calculator__sliders-wrap -->
+						<!-- calculator__sliders-wrap -->
+						<div class="calculator__sliders-wrap" data-calc-wrap="4">
+							<!-- slider -->
+							<div class="calculator__slider-container">
+								<ul>
+									<li>
+										<p>Инвестиции</p>
+									</li>
+									<li>
+										<div id="CalcInvestor_4_summ" class="nouislider"></div>
+									</li>
+									<li>
+										<p><span id="CalcInvestor_4_summ_value-1">120 000</span> руб.</p>
+									</li>
+								</ul>
+							</div>
+							<!-- /slider -->
+							<!-- slider -->
+							<div class="calculator__slider-container">
+								<ul>
+									<li>
+										<p>период</p>
+									</li>
+									<li>
+										<div id="CalcInvestor_4_time" class="nouislider"></div>
+									</li>
+									<li>
+										<p><span id="CalcInvestor_4_time_value-1">1</span> мес</p>
+									</li>
+								</ul>
+							</div>
+							<!-- /slider -->
+							<!-- result -->
+							<div class="calculator__result">
+								<ul>
+									<li>
+										<p>Вы получите</p>
+										<span id="CalcInvestor_4_result">1 560 780<i>руб.</i></span>
+									</li>
+									<li>
+										<div class="calculator__result-btn">
+											Подробнее 
+										</div>
+									</li>
+								</ul>
+							</div>
+							<!-- /result -->
+						</div>
+						<!-- /calculator__sliders-wrap -->
+					</div>
+					<!-- /First Calculator - Phisic Faces -->
+					<!-- First Calculator - Legal Faces -->
+					<div class="first-calculator__legal-faces">
+						<!-- tabs -->
+						<div class="calculator__tabs-container">
+							<ul>
+								<li>
+									<div class="calculator__tab tab-1 active" data-value="1">
+										<p>Моя цель</p>
+									</div>
+								</li>
+								<li>
+									<div class="calculator__tab tab-2" data-value="2">
+										<p>Ежемесячный доход</p>
+									</div>
+								</li>
+								<li>
+									<div class="calculator__tab tab-3" data-value="3">
+										<p>Максимальный процент</p>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<!-- /tabs -->
+						<!-- calculator__sliders-wrap -->
+						<div class="calculator__sliders-wrap" data-calc-wrap="1">
+							<!-- slider -->
+							<div class="calculator__slider-container">
+								<ul>
+									<li>
+										<p>Инвестиции</p>
+									</li>
+									<li>
+										<div id="CalcInvestorLegal_1_summ" class="nouislider"></div>
+									</li>
+									<li>
+										<p><span id="CalcInvestorLegal_1_summ_value-1">#1</span> руб.</p>
+									</li>
+								</ul>
+							</div>
+							<!-- /slider -->
+							<!-- slider -->
+							<div class="calculator__slider-container">
+								<ul>
+									<li>
+										<p>период</p>
+									</li>
+									<li>
+										<div id="CalcInvestorLegal_1_time" class="nouislider"></div>
+									</li>
+									<li>
+										<p><span id="CalcInvestorLegal_1_time_value-1">#1</span> мес</p>
+									</li>
+								</ul>
+							</div>
+							<!-- /slider -->
+							<!-- result -->
+							<div class="calculator__result">
+								<ul>
+									<li>
+										<p>Вы получите</p>
+										<span id="CalcInvestorLegal_1_result">#1<i>руб.</i></span>
+									</li>
+									<li>
+										<div class="calculator__result-btn">
+											Подробнее 
+										</div>
+									</li>
+								</ul>
+							</div>
+							<!-- /result -->
+						</div>
+						<!-- /calculator__sliders-wrap -->
+						<!-- calculator__sliders-wrap -->
+						<div class="calculator__sliders-wrap" data-calc-wrap="2">
+							<!-- slider -->
+							<div class="calculator__slider-container">
+								<ul>
+									<li>
+										<p>Инвестиции</p>
+									</li>
+									<li>
+										<div id="CalcInvestorLegal_2_summ" class="nouislider"></div>
+									</li>
+									<li>
+										<p><span id="CalcInvestorLegal_2_summ_value-1">#2</span> руб.</p>
+									</li>
+								</ul>
+							</div>
+							<!-- /slider -->
+							<!-- slider -->
+							<div class="calculator__slider-container">
+								<ul>
+									<li>
+										<p>период</p>
+									</li>
+									<li>
+										<div id="CalcInvestorLegal_2_time" class="nouislider"></div>
+									</li>
+									<li>
+										<p><span id="CalcInvestorLegal_2_time_value-1">#2</span> мес</p>
+									</li>
+								</ul>
+							</div>
+							<!-- /slider -->
+							<!-- result -->
+							<div class="calculator__result">
+								<ul>
+									<li>
+										<p>Вы получите</p>
+										<span id="CalcInvestorLegal_2_result">#2<i>руб.</i></span>
+									</li>
+									<li>
+										<div class="calculator__result-btn">
+											Подробнее 
+										</div>
+									</li>
+								</ul>
+							</div>
+							<!-- /result -->
+						</div>
+						<!-- /calculator__sliders-wrap -->
+						<!-- calculator__sliders-wrap -->
+						<div class="calculator__sliders-wrap" data-calc-wrap="3">
+							<!-- slider -->
+							<div class="calculator__slider-container">
+								<ul>
+									<li>
+										<p>Инвестиции</p>
+									</li>
+									<li>
+										<div id="CalcInvestorLegal_3_summ" class="nouislider"></div>
+									</li>
+									<li>
+										<p><span id="CalcInvestorLegal_3_summ_value-1">#3</span> руб.</p>
+									</li>
+								</ul>
+							</div>
+							<!-- /slider -->
+							<!-- slider -->
+							<div class="calculator__slider-container">
+								<ul>
+									<li>
+										<p>период</p>
+									</li>
+									<li>
+										<div id="CalcInvestorLegal_3_time" class="nouislider"></div>
+									</li>
+									<li>
+										<p><span id="CalcInvestorLegal_3_time_value-1">#3</span> мес</p>
+									</li>
+								</ul>
+							</div>
+							<!-- /slider -->
+							<!-- result -->
+							<div class="calculator__result">
+								<ul>
+									<li>
+										<p>Вы получите</p>
+										<span id="CalcInvestorLegal_3_result">#3<i>руб.</i></span>
+									</li>
+									<li>
+										<div class="calculator__result-btn">
+											Подробнее 
+										</div>
+									</li>
+								</ul>
+							</div>
+							<!-- /result -->
+						</div>
+						<!-- /calculator__sliders-wrap -->
+					</div>
+					<!-- /First Calculator - Legal Faces -->
+				</div>
+			</div>
+			<div id="calculator-2" class="header__calculator-block">
+				<div id="shooter" style="position: absolute; top: 0; right: 0px; width: 1px; height: 1px;"></div>
+				<div class="calculator-content">
+					<h1>Выберите нужную сумму денег</h1>
+					<div class="calculator-first-content__switch-container">
+						<span>физ. лица</span>
+						<span class="calculator_switch" data-switch-pos="1"><i></i></span>
+						<span>юр. лица</span>
+					</div>
+					<!-- Borrower Calculator - Phisic Faces -->
+					<div class="borrower-calculator-phisic">
+						<!-- tabs -->
+						<div class="calculator__tabs-container">
+							<ul>
+								<li>
+									<div class="calculator__tab tab-1 active" data-value="1">
+										<p>Краткосрочные займы</p>
+									</div>
+								</li>
+								<li>
+									<div class="calculator__tab tab-2" data-value="2">
+										<p>Займы под залог недвиж.</p>
+									</div>
+								</li>
+								<li>
+									<div class="calculator__tab tab-3" data-value="3">
+										<p>Займы под залог авто</p>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<!-- /tabs -->
+						<!-- CalcBorrower 1 -->
+						<!-- wrap calc slides -->
+						<div class="calculator__sliders-wrap" data-calc-wrap="1">
+							<!-- slider -->
+							<div class="calculator__slider-container">
+								<ul>
+									<li>
+										<p>сумма займа</p>
+									</li>
+									<li>
+										<div id="CalcBorrower_1_summ" class="nouislider"></div>
+									</li>
+									<li>
+										<p><span id="CalcBorrower_1_summ_value-1">120 000</span> руб.</p>
+									</li>
+								</ul>
+							</div>
+							<!-- /slider -->
+							<!-- slider -->
+							<div class="calculator__slider-container">
+								<ul>
+									<li>
+										<p>срок займа</p>
+									</li>
+									<li>
+										<div id="CalcBorrower_1_time" class="nouislider"></div>
+									</li>
+									<li>
+										<p><span id="CalcBorrower_1_time_value-1">120 000</span> дн.</p>
+									</li>
+								</ul>
+							</div>
+							<!-- /slider -->
+							<!-- result -->
+							<div class="calculator__result">
+								<ul>
+									<li>
+										<p>Сумма возврата</p>
+										<span id="CalcBorrower_1_result"></span>
+									</li>
+									<li>
+										<div class="calculator__result-btn">
+											оформить
+										</div>
+									</li>
+								</ul>
+							</div>
+							<!-- /result -->
+						</div>
+						<!-- /wrap calc slides -->
+						<!-- wrap calc slides -->
+						<div class="calculator__sliders-wrap" data-calc-wrap="2">
+							<!-- slider -->
+							<div class="calculator__slider-container">
+								<ul>
+									<li>
+										<p>Сумма займа</p>
+									</li>
+									<li>
+										<div id="CalcBorrower_2_summ" class="nouislider"></div>
+									</li>
+									<li>
+										<p><span id="CalcBorrower_2_summ_value-1">120 000</span> руб.</p>
+									</li>
+								</ul>
+							</div>
+							<!-- /slider -->
+							<!-- slider -->
+							<div class="calculator__slider-container">
+								<ul>
+									<li>
+										<p>срок займа</p>
+									</li>
+									<li>
+										<div id="CalcBorrower_2_time" class="nouislider"></div>
+									</li>
+									<li>
+										<p><span id="CalcBorrower_2_time_value-1">120 000</span> мес.</p>
+									</li>
+								</ul>
+							</div>
+							<!-- /slider -->
+							<!-- result -->
+							<div class="calculator__result">
+								<ul>
+									<li>
+										<p>Сумма возврата</p>
+										<span id="CalcBorrower_2_result"></span>
+									</li>
+									<li>
+										<div class="calculator__result-btn">
+											оформить
+										</div>
+									</li>
+								</ul>
+							</div>
+							<!-- /result -->
+						</div>
+						<!-- /wrap calc slides -->
+						<!-- wrap calc slides -->
+						<div class="calculator__sliders-wrap" data-calc-wrap="3">
+							<!-- slider -->
+							<div class="calculator__slider-container">
+								<ul>
+									<li>
+										<p>сумма займа</p>
+									</li>
+									<li>
+										<div id="CalcBorrower_3_summ" class="nouislider"></div>
+									</li>
+									<li>
+										<p><span id="CalcBorrower_3_summ_value-1">120 000</span> руб.</p>
+									</li>
+								</ul>
+							</div>
+							<!-- /slider -->
+							<!-- slider -->
+							<div class="calculator__slider-container">
+								<ul>
+									<li>
+										<p>срок займа</p>
+									</li>
+									<li>
+										<div id="CalcBorrower_3_time" class="nouislider"></div>
+									</li>
+									<li>
+										<p><span id="CalcBorrower_3_time_value-1">120 000</span> мес.</p>
+									</li>
+								</ul>
+							</div>
+							<!-- /slider -->
+							<!-- result -->
+							<div class="calculator__result">
+								<ul>
+									<li>
+										<p>Сумма возврата</p>
+										<span id="CalcBorrower_3_result"></span>
+									</li>
+									<li>
+										<div class="calculator__result-btn">
+											оформить
+										</div>
+									</li>
+								</ul>
+							</div>
+							<!-- /result -->
+						</div>
+						<!-- /wrap calc slides -->
+					</div>
+					<!-- /Borrower Calculator - Phisic Faces -->
+					<!-- Borrower Calculator - Legal Faces -->
+					<div class="borrower-calculator-legal">
+						<!-- tabs -->
+						<div class="calculator__tabs-container">
+							<ul>
+								<li>
+									<div class="calculator__tab tab-1 active" data-value="1">
+										<p>Займы под инвестиции</p>
+									</div>
+								</li>
+								<li>
+									<div class="calculator__tab tab-2" data-value="2">
+										<p>Займы для предпринимателей</p>
+									</div>
+								</li>
+								<li>
+									<div class="calculator__tab tab-3" data-value="3">
+										<p>Займы для юр. лиц</p>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<!-- /tabs -->
+						<!-- CalcBorrower 2 -->
+						<!-- wrap calc slides -->
+						<div class="calculator__sliders-wrap" data-calc-wrap="1">
+							<!-- slider -->
+							<div class="calculator__slider-container">
+								<ul>
+									<li>
+										<p>сумма займа</p>
+									</li>
+									<li>
+										<div id="CalcBorrowerLegal_1_summ" class="nouislider"></div>
+									</li>
+									<li>
+										<p><span id="CalcBorrowerLegal_1_summ_value-1">120 000</span> руб.</p>
+									</li>
+								</ul>
+							</div>
+							<!-- /slider -->
+							<!-- slider -->
+							<div class="calculator__slider-container">
+								<ul>
+									<li>
+										<p>срок займа</p>
+									</li>
+									<li>
+										<div id="CalcBorrowerLegal_1_time" class="nouislider"></div>
+									</li>
+									<li>
+										<p><span id="CalcBorrowerLegal_1_time_value-1">120 000</span> мес.</p>
+									</li>
+								</ul>
+							</div>
+							<!-- /slider -->
+							<!-- result -->
+							<div class="calculator__result">
+								<ul>
+									<li>
+										<p>Сумма возврата</p>
+										<span id="CalcBorrowerLegal_1_result"></span>
+									</li>
+									<li>
+										<div class="calculator__result-btn">
+											оформить
+										</div>
+									</li>
+								</ul>
+							</div>
+							<!-- /result -->
+						</div>
+						<!-- /wrap calc slides -->
+						<!-- wrap calc slides -->
+						<div class="calculator__sliders-wrap" data-calc-wrap="2">
+							<!-- slider -->
+							<div class="calculator__slider-container">
+								<ul>
+									<li>
+										<p>сумма займа</p>
+									</li>
+									<li>
+										<div id="CalcBorrowerLegal_2_summ" class="nouislider"></div>
+									</li>
+									<li>
+										<p><span id="CalcBorrowerLegal_2_summ_value-1">120 000</span> руб.</p>
+									</li>
+								</ul>
+							</div>
+							<!-- /slider -->
+							<!-- slider -->
+							<div class="calculator__slider-container">
+								<ul>
+									<li>
+										<p>срок займа</p>
+									</li>
+									<li>
+										<div id="CalcBorrowerLegal_2_time" class="nouislider"></div>
+									</li>
+									<li>
+										<p><span id="CalcBorrowerLegal_2_time_value-1">120 000</span> мес.</p>
+									</li>
+								</ul>
+							</div>
+							<!-- /slider -->
+							<!-- result -->
+							<div class="calculator__result">
+								<ul>
+									<li>
+										<p>Сумма возврата</p>
+										<span id="CalcBorrowerLegal_2_result"></span>
+									</li>
+									<li>
+										<div class="calculator__result-btn">
+											оформить
+										</div>
+									</li>
+								</ul>
+							</div>
+							<!-- /result -->
+						</div>
+						<!-- /wrap calc slides -->
+						<!-- wrap calc slides -->
+						<div class="calculator__sliders-wrap" data-calc-wrap="3">
+							<!-- slider -->
+							<div class="calculator__slider-container">
+								<ul>
+									<li>
+										<p>сумма займа</p>
+									</li>
+									<li>
+										<div id="CalcBorrowerLegal_3_summ" class="nouislider"></div>
+									</li>
+									<li>
+										<p><span id="CalcBorrowerLegal_3_summ_value-1">120 000</span> руб.</p>
+									</li>
+								</ul>
+							</div>
+							<!-- /slider -->
+							<!-- slider -->
+							<div class="calculator__slider-container">
+								<ul>
+									<li>
+										<p>срок займа</p>
+									</li>
+									<li>
+										<div id="CalcBorrowerLegal_3_time" class="nouislider"></div>
+									</li>
+									<li>
+										<p><span id="CalcBorrowerLegal_3_time_value-1">120 000</span> мес.</p>
+									</li>
+								</ul>
+							</div>
+							<!-- /slider -->
+							<!-- result -->
+							<div class="calculator__result">
+								<ul>
+									<li>
+										<p>Сумма возврата</p>
+										<span id="CalcBorrowerLegal_3_result"></span>
+									</li>
+									<li>
+										<div class="calculator__result-btn">
+											оформить
+										</div>
+									</li>
+								</ul>
+							</div>
+							<!-- /result -->
+						</div>
+						<!-- /wrap calc slides -->
+					</div>
+					<!-- /Borrower Calculator - Legal Faces -->
+				</div>
+			</div>
+			<!-- Calculators Blocks -->
+		</div>
+		<div class="header__phone-cabinet-container animated">
+			<!-- выпадающие меню -->
+				<div class="header__admin-window">
+					<!-- вход -->
+					<div class="header__admin-window-content login">
+						<form id="login" action="#">
+							<input type="text" name="login" placeholder="Логин">
+							<input type="text" name="password" placeholder="Пароль">
+							<input type="submit" value="Войти">
+							<a href="#">Регистрация</a>
+						</form>
+					</div>
+					<!-- /вход -->
+					<!-- регистрация -->
+					<div class="header__admin-window-content register">
+						<form id="register" action="#">
+							<input type="text" name="login" placeholder="Логин">
+							<input type="text" name="email" placeholder="E-mail">
+							<input type="text" class="password" name="password" placeholder="Пароль">
+							<input type="text" name="confirmpassword" placeholder="Повторите пароль">
+							<input type="submit" value="Регистрация">
+							<a href="#">Вход</a>
+						</form>
+					</div>
+					<!-- /регистрация -->
+				</div>
+			<!-- /выпадающие меню -->
+			<div class="header__phone-container">
+				<a href="tel:88005006000">8 (800) 500 60 00</a>
+			</div>
+			<div class="header__cabinet-container">
+				<div class="header__cabinet-button">
+					Личный<br>кабинет
+				</div>
+			</div>
+		</div>
+	</header>
+	<!-- main -->
+	<main>
+		<!-- Кнопка Заказа звонка -->
+		<div class="bid-call-btn">
+			<p>обратный звонок</p>
+			<!-- Скрытый блок заказа звонка -->
+			<div class="call-bid-block">
+				<div class="call-bid-block-content">
+					<form id="bidcall" action="#">
+						<input type="text" name="name" placeholder="Имя">
+						<input type="text" name="phone" placeholder="Телефон">
+						<input type="submit" value="Отправить">
+						<!-- <button type="submit">Отправить</button> -->
+					</form>
+				</div>
+			</div>
+			<!-- /Скрытый блок заказа звонка -->
+		</div>
+		<!-- /Кнопка Заказа звонка -->
+		<!-- Блок Инвестиции -->
+		<div class="standart-container investments clearfix">
+			<div class="investments-row">
+				<div class="investments-column">
+					<div class="investments-title-img-block"></div>
+				</div>
+				<div class="investments-title-block">
+					<div class="investments-title-wrap">
+						<p>Почему выгодно</p>
+						<h1>инвестировать в микрофинансовый сектор?</h1>
+					</div>
+				</div>
+			</div>
+			<div class="investments-row left-padding">
+				<div class="investments-column">
+					<div class="why-block gray">
+						<div class="investments-number">01</div>
+						<div class="why-block-content">
+							<h2>ставка до 28%</h2>
+							<p>Инвестиционный займ гораздо выгоднее стандартного банковского вклада. Вы будете получать больше прибыли, вложив деньги в надёжную микрофинансовую компанию.</p>
+						</div>
+					</div>
+				</div>
+				<div class="investments-column">
+					<div class="why-block white">
+						<div class="investments-number">02</div>
+						<div class="why-block-content">
+							<h2>НАДЁЖНЫЙ ДОХОД</h2>
+							<p>Проценты можно капитализировать или ежемесячно/ежеквартально получать на свой расчётный счёт.</p>
+						</div>
+					</div>
+				</div>
+				<div class="investments-column">
+					<div class="why-block bg-1"></div>
+				</div>
+				<div class="investments-column">
+					<div class="why-block white">
+						<div class="investments-number">03</div>
+						<div class="why-block-content">
+							<h2>ДОВЕРИТЕЛЬНОЕ ПАРТНЕРСТВО</h2>
+							<p>Готовы предоставить финансовую отчётность по Вашему требованию.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="investments-row left-padding">
+				<div class="investments-column">
+					<div class="why-block bg-2"></div>
+				</div>
+				<div class="investments-column">
+					<div class="why-block gray">
+						<div class="investments-number">04</div>
+						<div class="why-block-content">
+							<h2>ИНДИВИДУАЛЬНЫЙ</h2>
+							<p>Вы можете обратиться с любым вопросом к своему персональному менеджеру, который будет сопровождать Вас на протяжении всего сотрудничества с нами.</p>
+						</div>
+					</div>
+				</div>
+				<div class="investments-column">
+					<div class="why-block white">
+						<div class="investments-number">05</div>
+						<div class="why-block-content">
+							<h2>УВАЖЕНИЕ К ЗАКОНУ</h2>
+							<p>Деятельность компании регулируется Центральным Банком РФ. Предложение соответствует федеральному закону №151 «О микрофинансовой деятельности и микрофинансовых организациях».</p>
+						</div>
+					</div>
+				</div>
+				<div class="investments-column">
+					<div class="why-block gray">
+						<div class="investments-number">06</div>
+						<div class="why-block-content">
+							<h2>ПЕРСОНАЛЬНЫЙ ФИНАНСОВЫЙ ЭКСПЕРТ</h2>
+							<p>Мы самостоятельно уплатим за Вас 13% НДФЛ и переведем начисленные проценты на любой из Ваших счетов.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="investments-row investments-pluses-row clearfix">
+				<div class="investments-pluses-block question clearfix">
+					<div class="investments-pluses-block-content">
+						<div class="investments-column">
+							<div class="investments-plus">
+								<img src="assets/img/icons/invest-plus-1.png" alt="Плюсы инвестиций">
+								<h3>рейтинг</h3>
+								<p>Эксперты подтверждают наивысший рейтинг по объему портфеля</p>
+							</div>
+						</div>
+						<div class="investments-column">
+							<div class="investments-plus">
+								<img src="assets/img/icons/invest-plus-2.png" alt="Плюсы инвестиций">
+								<h3>рейтинг</h3>
+								<p>Лидер по количеству выданных займов среди МФО</p>
+							</div>
+						</div>
+						<div class="investments-column">
+							<div class="investments-plus">
+								<img src="assets/img/icons/invest-plus-3.png" alt="Плюсы инвестиций">
+								<h3>рейтинг</h3>
+								<p>Лидер по количеству выданных займов среди МФО</p>
+							</div>
+						</div>
+						<div class="investments-column">
+							<div class="investments-plus">
+								<img src="assets/img/icons/invest-plus-4.png" alt="Плюсы инвестиций">
+								<h3>рейтинг</h3>
+								<p>Наши филиалы есть в каждом городе России</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="investments-column">
+					<div class="investments-pluses-title-questions">
+						<p>ПОЧЕМУ НАМ ДОВЕРЯЮТ?</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="standart-container clearfix">
+			<div class="investments__about-text-container">
+				<img src="assets/img/logos/Inkasso_mini.svg" alt="Инкассо">
+				<h2>“инкассо” - ЭТО</h2>
+				<p>Мы за честный, открытый, прозрачный бизнес. Мы готовы предложить нашим клиентам полностью предоставлять информацию обо всех аспектах нашей деятельности.</p>
+				<p><strong>Мы за высокий доход наших клиентов. Наши ставки по сбережениям населения выше банковских более чем на 5%</strong>
+				Мы за снижение рисков. Мы страхуем риски наших клиентов и свою ответственность за неисполнение своих обязательств перед ними.</p>
+				<p>Мы за качественное обслуживание. Особое внимание мы уделяем работе с клиентами. Наши клиенты всегда могут рассчитывать на вежливое профессиональное обслуживание.</p>
+			</div>
+		</div>
+		<div class="standart-container">
+			<div class="investments-row investments-steps-row clearfix">
+				<div class="investments-column steps-title-column">
+					<div class="investments__steps-title">
+						Инвестиции – это просто
+					</div>
+				</div>
+				<div class="investments-steps-block clearfix">
+					<div class="investments-column">
+						<div class="step-block">
+							<img src="assets/img/icons/invest-step-1.png" alt="#">
+							<p>ЗаполнИТЕ форму</p>
+						</div>
+					</div>
+					<div class="investments-column">
+						<div class="step-block">
+							<img src="assets/img/icons/invest-step-2.png" alt="#">
+							<p>ПОСЕТИТЕ РЕГИОНАЛЬНЫЙ ОФИС</p>
+						</div>
+					</div>
+					<div class="investments-column">
+						<div class="step-block">
+							<img src="assets/img/icons/invest-step-3.png" alt="#">
+							<p>ВЫБЕРИТЕ ИНВЕСТИЦИОННЫЙ ПРОДУКТ</p>
+						</div>
+					</div>
+					<div class="investments-column">
+						<div class="step-block">
+							<img src="assets/img/icons/invest-step-4.png" alt="#">
+							<p>ЗАРАБАТЫВАЙТЕ С «ИНКАССО»</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="standart-container">
+			<div class="investments_container-for-btn">
+				<div class="investments__request-btn md-trigger" data-modal="modal-2">остались вопросы?</div>
+			</div>
+		</div>
+		<!-- /Блок Инвестиции -->
+		<div class="md-modal md-effect-13" id="modal-1">
+	<div class="md-content">
+		<h3>Подать Заявку</h3>
+		<div>
+			<p>КРАТКОСРОЧНЫЕ ЗАЙМЫ ДЛЯ ФИЗИЧЕСКИХ ЛИЦ</p>
+			<ul>
+				<!-- <li><strong>Read:</strong> Modal windows will probably tell you something important so don't forget to read what it says.</li> -->
+				<li><input type="text" name="name" placeholder="Фамилия"></li>
+				<li><input type="text" name="name" placeholder="Имя"></li>
+				<li><input type="text" name="name" placeholder="Отчество"></li>
+				<li><input type="phone" name="phone" placeholder="Телефон"></li>
+				<li><input type="email" name="email" placeholder="E-mail"></li>
+			</ul>
+			<button class="md-close">отправить</button>
+		</div>
+	</div>
+</div>
+
+<!-- Инвестиции - модальное окно -->
+<div class="md-modal md-effect-13" id="modal-2">
+	<div class="md-content">
+		<h3>Задать Вопрос</h3>
+		<div>
+			<!-- <p>КРАТКОСРОЧНЫЕ ЗАЙМЫ ДЛЯ ФИЗИЧЕСКИХ ЛИЦ</p> -->
+			<ul>
+				<!-- <li><strong>Read:</strong> Modal windows will probably tell you something important so don't forget to read what it says.</li> -->
+				<li><input type="phone" name="phone" placeholder="Телефон"></li>
+				<li><input type="email" name="email" placeholder="E-mail"></li>
+				<li><textarea name="commit" placeholder="Ваш вопрос"></textarea></li>
+			</ul>
+			<button class="md-close">отправить</button>
+		</div>
+	</div>
+</div>
+<!-- /Инвестиции - модальное окно -->
+
+
+<div class="md-overlay"></div>
+	</main>
+	<!-- /main -->
+	<footer>
+		<div class="footer-content">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-xs-12 col-sm-6 col-lg-4 footer-1-column">
+						<address>
+							<h5>Мы находимся по адресу:</h5>
+							<p>ул. Красных тюленей д. 35, к.1, оф. 4</p>
+							<a href="tel:88005006000">8 (800) 500 60 00</a>
+						</address>
+					</div>
+					<div class="col-xs-12 col-sm-6 col-lg-2 footer-2-column">
+						<h4>О компании</h4>
+						<ul>
+							<li>
+								<a href="#">регуляция</a>
+							</li>
+							<li>
+								<a href="#">цель</a>
+							</li>
+							<li>
+								<a href="#">история</a>
+							</li>
+						</ul>
+					</div>
+					<div class="col-xs-12 col-sm-6 col-lg-4 footer-3-column clearfix">
+						<h4>Займы</h4>
+						<ul>
+							<li>
+								<a href="#">краткосрочные займы для физических лиц</a>
+							</li>
+							<li>
+								<a href="#">займы физическим лицам под залог недвижимости</a>
+							</li>
+							<li>
+								<a href="#">займы физическим лицам под залог автотранспорта</a>
+							</li>
+							<li>
+								<a href="#">займы для индивидуальных предпринимателей</a>
+							</li>
+							<li>
+								<a href="#">займы под инвестиции</a>
+							</li>
+							<li>
+								<a href="#">займы для юридических лиц</a>
+							</li>
+						</ul>
+					</div>
+					<div class="col-xs-12 col-sm-6 col-lg-2 footer-4-column">
+						<h4>инвесторам</h4>
+						<ul>
+							<li>
+								<a href="#">почему выгодно инвестировать в микрофинансовый сектор?</a>
+							</li>
+							<li>
+								<a href="#">почему нам доверяют?</a>
+							</li>
+							<li>
+								<a href="#">инвестиции - это просто</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer-underline clearfix">
+			<p>Все права защищены 2015</p>
+			<p>Лицензия №3469034683406754067</p>
+		</div>
+	</footer>
+	<!-- Scripts - Скрипты -->
+	<!-- formula.js 
+	<script src="assets/plugins/formula/lib/formula.js"></script>-->
+	<!-- CUMIPMT.js 
+	<script src="assets/scripts/CUMIPMT.js"></script>-->
+	<!-- JQ 1.11.3 -->
+	<script src="assets/scripts/jquery-1.11.3.min.js"></script>
+	<!-- JQ 1.11.3 -->
+	<script src="assets/scripts/jquery.validate.min.js"></script>
+	<!-- JQ input mask -->
+	<script src="assets/scripts/jquery.maskedinput.min.js"></script>
+	<!-- noUiSlider -->
+	<script src="assets/plugins/noUiSlider.8.0.2/nouislider.min.js"></script>
+	<script src="assets/plugins/noUiSlider.8.0.2/wNumb.min.js"></script>
+	<!-- Slick Slider -->
+	<script src="assets/plugins/slick/slick.min.js"></script>
+	<!-- modalEffects.js -->
+	<script src="assets/scripts/classie.js"></script>
+	<script src="assets/scripts/modalEffects.js"></script>
+	<!-- Own Script / Наш скрипт -->
+	<script src="assets/scripts/oun-script.js"></script>
+	<!-- /Scripts - Скрипты -->
+</body>
+</html>

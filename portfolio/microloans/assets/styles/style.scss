@@ -1,0 +1,46 @@
+// bootstrap - only grid
+@import 'bootstrap.min';
+
+@import 'animations';
+
+@import 'variables';
+
+@import 'fonts';
+
+@import 'mixins';
+
+@import 'main';
+
+@import 'contacts';
+
+@import 'aboutus';
+
+@import 'news';
+
+@import 'loans';
+
+@import 'modals';
+
+@import 'investments';
+
+
+
+//* {outline: 1px yellowgreen dashed;}
+
+//body { background: url(../../_work-files/symmetric-grid-bootstrap.png) no-repeat center; background-size: 100% 100%;}
+
+@import 'adaptive';
+
+body {overflow-x: hidden;}
+
+// @media screen and (min-width: 1200px) and (max-width: 1300px) {
+//     @media screen and (min-height: 1000px) and (max-height: 1050px) {
+//         body {display: none;}
+//     }
+// }
+
+.error {
+	color: white;
+	padding: 4px 4px 4px 0;
+	border: 2px solid #b1011a;
+}

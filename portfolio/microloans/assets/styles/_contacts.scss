@@ -1,0 +1,118 @@
+.map-container {
+	padding-left: 80px;
+	width: 100%;
+	height: 724px;
+	position: relative;
+}
+.map-content {
+	background: url(../img/other/map.jpg) no-repeat center;
+	background-size: cover;
+	width: 100%; height: 100%;
+	position: relative;
+	//
+	.map-js {
+		position: absolute; width: 100%; height: 100%;
+		background: #fff;
+	}
+}
+
+.map-text-box {
+	width: 286px;
+	height: 262px;
+	background-color: $bg-6;
+	position: absolute;
+	z-index: 99999;
+	bottom: 0;
+	left: 0;
+	padding: 64px;
+	color: $bg-6;
+	//
+	h2 {
+		@include MyriadProRegular;
+		font-weight: 800;
+		font-size: 30px;
+		width: 100%;
+		text-transform: uppercase;
+		color: #3b3d47;
+	}
+}
+
+.standart-container {
+	margin-left: 80px; margin-right: 80px;
+}
+
+.contacts-text-box {
+	width: 286px;
+	height: 262px;
+	background-color: $bg-7;
+	padding: 64px;
+	color: white;
+	position: absolute;
+	//
+	h1 {
+		@include MyriadProRegular;
+		font-weight: 800;
+		font-size: 30px;
+		width: 100%;
+		text-transform: uppercase;
+		color: white;
+	}
+	//
+	&:before {
+		content: "";
+		display: block;
+		position: absolute;
+		top: 118px;
+		right: -10px;
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 18px 0 18px 10px;
+		border-color: transparent transparent transparent $bg-7;
+	}
+}
+
+.contacts-block {
+	width: 100%;
+	height: 262px;
+	@include InlineFlex;
+	@include JustifyContent;
+	@include AlignItemsCenter;
+	@include MyriadProBold;
+	font-size: 16px;
+	color: $f-17;
+	//
+	p {
+		padding: 10px 20px;
+	}
+	.phones {
+		display: inline-block;
+		padding-left: 44px;
+		background: url(../img/icons/red-circle-phone.png) no-repeat center left;
+		//
+		p {
+			margin: 0; padding: 6px 0px;
+			//
+			a {
+				color: $f-17;
+				@include MyriadProBold;
+				font-size: 19px;
+				//
+				&:hover {
+					text-decoration: none;
+				}
+			}
+		}
+	}
+	a.email {
+		@include MyriadProRegular;
+		font-size: 18px;
+		color: $f-17;
+		text-decoration: underline;
+		background: #ebebec;
+		padding: 10px 20px;
+	}
+}
+
+.contacts-text-box + .row { margin-left: 286px;}
+
