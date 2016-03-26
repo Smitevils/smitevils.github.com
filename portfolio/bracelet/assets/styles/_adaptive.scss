@@ -1,0 +1,94 @@
+@media screen and (max-width: 1100px) {
+	.section-text {
+		top: 160px;
+		padding-right: 20px;
+	}
+	.section-order h1 {
+		margin: 10px 0;
+		font-size: 32px;
+	}
+}
+
+@media screen and (max-width: 900px) {
+	.section-order h1 {
+		margin: 10px 0;
+		font-size: 28px;
+	}
+	.section-form-adress {
+		top: 100px;
+	}
+	input {
+		width: 100%; padding: 4px 2%;
+	}
+	input[type="submit"] {
+		padding: 8px 0px;
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 800px) {
+	nav {display: none;}
+	.logo img {
+		width: 50px;
+		height: 30px;
+	}
+	.section-form-adress {
+		width: 90%;
+		top: 80px;
+	}
+	textarea {display: none;}
+	.ui-help__mouse {
+		display: none;
+	}
+	.section-text {
+		width: 92%;
+		padding-right: 0;
+		padding: 4%
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.section-text {
+		top: 40px;
+	}
+	h1.section-text__title {
+		font-size: 42px;
+	}
+	p.section-text__text {
+		font-size: 22px;
+	}
+	.logo {top: 15px;}
+	.number {font-size: 18px; line-height: 30px; top: 15px;}
+	.section-form-adress {
+		padding: 5%;
+		top: 40px;
+	}
+	.section-order {
+		width: 100%; float: left;
+	}
+	.section-adress {
+		width: 100%; position: relative; float: left;
+	}
+	.number:before {
+		display: none;
+	}
+	p.adress {margin: 12px 0; line-height: 20px;}
+	p.work-time {margin: 12px 0; line-height: 20px;}
+	.section-order h1 {
+		font-size: 20px;
+	}
+	.section-order h4 {
+		font-size: 16px; margin: 8px;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	h1.section-text__title {
+		font-size: 28px;
+	}
+	p.section-text__text {
+		font-size: 18px;
+	}
+	a.developer {display: none;}
+}
+

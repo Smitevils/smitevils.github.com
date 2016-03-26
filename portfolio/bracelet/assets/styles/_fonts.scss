@@ -1,0 +1,113 @@
+/* font-family: "RobotoCondensedRegular"; */
+@font-face {
+	font-family: "RobotoCondensedRegular";
+	src: url("../fonts/RobotoCondensed/RobotoCondensedRegular/RobotoCondensedRegular.eot");
+	src: url("../fonts/RobotoCondensed/RobotoCondensedRegular/RobotoCondensedRegular.eot?#iefix")format("embedded-opentype"),
+	url("../fonts/RobotoCondensed/RobotoCondensedRegular/RobotoCondensedRegular.woff") format("woff"),
+	url("../fonts/RobotoCondensed/RobotoCondensedRegular/RobotoCondensedRegular.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
+/* font-family: "RobotoCondensedLight"; */
+@font-face {
+	font-family: "RobotoCondensedLight";
+	src: url("../fonts/RobotoCondensed/RobotoCondensedLight/RobotoCondensedLight.eot");
+	src: url("../fonts/RobotoCondensed/RobotoCondensedLight/RobotoCondensedLight.eot?#iefix")format("embedded-opentype"),
+	url("../fonts/RobotoCondensed/RobotoCondensedLight/RobotoCondensedLight.woff") format("woff"),
+	url("../fonts/RobotoCondensed/RobotoCondensedLight/RobotoCondensedLight.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
+/* font-family: "RobotoCondensedBold"; */
+@font-face {
+	font-family: "RobotoCondensedBold";
+	src: url("../fonts/RobotoCondensed/RobotoCondensedBold/RobotoCondensedBold.eot");
+	src: url("../fonts/RobotoCondensed/RobotoCondensedBold/RobotoCondensedBold.eot?#iefix")format("embedded-opentype"),
+	url("../fonts/RobotoCondensed/RobotoCondensedBold/RobotoCondensedBold.woff") format("woff"),
+	url("../fonts/RobotoCondensed/RobotoCondensedBold/RobotoCondensedBold.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
+
+/*********************************************************/
+
+/* font-family: "RobotoBoldCondensed"; */
+@font-face {
+	font-family: 'RobotoBoldCondensed';
+	src: url('../fonts/Roboto/RobotoBoldCondensed/RobotoBoldCondensed.eot');
+	src: url('../fonts/Roboto/RobotoBoldCondensed/RobotoBoldCondensed.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/Roboto/RobotoBoldCondensed/RobotoBoldCondensed.woff2') format('woff2'),
+		 url('../fonts/Roboto/RobotoBoldCondensed/RobotoBoldCondensed.woff') format('woff'),
+		 url('../fonts/Roboto/RobotoBoldCondensed/RobotoBoldCondensed.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+
+}
+
+/******************************************************/
+
+/* font-family: "HelveticaNeueCyrBold"; */
+@font-face {
+	font-family: 'HelveticaNeueCyrBold';
+	src: url('../fonts/HelveticaNeueCyr/HelveticaNeueCyrBold/HelveticaNeueCyrBold.eot');
+	src: url('../fonts/HelveticaNeueCyr/HelveticaNeueCyrBold/HelveticaNeueCyrBold.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/HelveticaNeueCyr/HelveticaNeueCyrBold/HelveticaNeueCyrBold.woff2') format('woff2'),
+		 url('../fonts/HelveticaNeueCyr/HelveticaNeueCyrBold/HelveticaNeueCyrBold.woff') format('woff'),
+		 url('../fonts/HelveticaNeueCyr/HelveticaNeueCyrBold/HelveticaNeueCyrBold.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* font-family: "HelveticaNeueCyrLight"; */
+@font-face {
+	font-family: 'HelveticaNeueCyrLight';
+	src: url('../fonts/HelveticaNeueCyr/HelveticaNeueCyrLight/HelveticaNeueCyrLight.eot');
+	src: url('../fonts/HelveticaNeueCyr/HelveticaNeueCyrLight/HelveticaNeueCyrLight.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/HelveticaNeueCyr/HelveticaNeueCyrLight/HelveticaNeueCyrLight.woff2') format('woff2'),
+		 url('../fonts/HelveticaNeueCyr/HelveticaNeueCyrLight/HelveticaNeueCyrLight.woff') format('woff'),
+		 url('../fonts/HelveticaNeueCyr/HelveticaNeueCyrLight/HelveticaNeueCyrLight.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* font-family: "HelveticaNeueCyrRoman"; */
+@font-face {
+	font-family: 'HelveticaNeueCyrRoman';
+	src: url('../fonts/HelveticaNeueCyr/HelveticaNeueCyrRoman/HelveticaNeueCyrRoman.eot');
+	src: url('../fonts/HelveticaNeueCyr/HelveticaNeueCyrRoman/HelveticaNeueCyrRoman.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/HelveticaNeueCyr/HelveticaNeueCyrRoman/HelveticaNeueCyrRoman.woff2') format('woff2'),
+		 url('../fonts/HelveticaNeueCyr/HelveticaNeueCyrRoman/HelveticaNeueCyrRoman.woff') format('woff'),
+		 url('../fonts/HelveticaNeueCyr/HelveticaNeueCyrRoman/HelveticaNeueCyrRoman.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* fonts mixins */
+
+@mixin RobotoCondensedRegular {
+	font-family: "RobotoCondensedRegular", RobotoCondensedRegular, sans-serif;
+}
+
+@mixin RobotoCondensedLight {
+	font-family: "RobotoCondensedLight", RobotoCondensedLight, sans-serif;
+}
+
+@mixin RobotoCondensedBold {
+	font-family: "RobotoCondensedBold", RobotoCondensedBold, sans-serif;
+}
+
+@mixin RobotoBoldCondensed {
+	font-family: "RobotoBoldCondensed", RobotoBoldCondensed, sans-serif;
+}
+
+@mixin HelveticaNeueCyrBold {
+	font-family: "HelveticaNeueCyrBold", HelveticaNeueCyrBold, sans-serif;
+}
+
+@mixin HelveticaNeueCyrLight {
+	font-family: "HelveticaNeueCyrLight", HelveticaNeueCyrLight, sans-serif;
+}
+
+@mixin HelveticaNeueCyrRoman {
+	font-family: "HelveticaNeueCyrRoman", HelveticaNeueCyrRoman, sans-serif;
+}

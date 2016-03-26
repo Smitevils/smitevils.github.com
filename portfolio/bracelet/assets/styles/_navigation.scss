@@ -1,0 +1,39 @@
+nav {
+	display: inline-block; top: 50%; margin-top: -185px;
+	position: absolute; z-index: 9999;
+	ul {
+		padding: 0; margin: 0;
+		list-style: none;
+		li {
+			width: 64px;
+			height: 62px;
+			margin: 10px;
+			a {
+				display: block;
+				width: 100%; height: 100%;
+			}
+		}
+	}
+}
+
+.anchor-1,.anchor-2,.anchor-3,.anchor-4,.anchor-5 {
+	-webkit-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.anchor-1 {background: url(../img/nav/nav-1.png) center transparent; background-size: contain; opacity: 0.5;}
+.anchor-1:hover {opacity: 1;}
+.anchor-1.on {opacity: 1;}
+.anchor-2 {background: url(../img/nav/nav-2.png) center transparent; background-size: contain; opacity: 0.5;}
+.anchor-2:hover {opacity: 1;}
+.anchor-2.on {opacity: 1;}
+.anchor-3 {background: url(../img/nav/nav-3.png) center transparent; background-size: contain; opacity: 0.5;}
+.anchor-3:hover {opacity: 1;}
+.anchor-3.on {opacity: 1;}
+.anchor-4 {background: url(../img/nav/nav-4.png) center transparent; background-size: contain; opacity: 0.5;}
+.anchor-4:hover {opacity: 1;}
+.anchor-4.on {opacity: 1;}
+.anchor-5 {background: url(../img/nav/nav-5.png) center transparent; background-size: contain; opacity: 0.5;}
+.anchor-5:hover {opacity: 1;}
+.anchor-5.on {opacity: 1;}

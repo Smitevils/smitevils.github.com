@@ -1,0 +1,209 @@
+@import "normalize";
+@import "fonts";
+@import "variables";
+@import "helpmouse";
+@import "navigation";
+@import "animate";
+
+
+
+//* {outline: 1px red solid;}
+body {color: $body-font-color;}
+
+.section-bg-1 {
+	background: url(../img/slides/section-bg-1.jpg) center transparent;
+	background-size: cover;
+}
+.section-bg-2 {
+	background: url(../img/slides/section-bg-2.jpg) center transparent;
+	background-size: cover;
+}
+.section-bg-3 {
+	background: url(../img/slides/section-bg-3.jpg) center transparent;
+	background-size: cover;
+}
+.section-bg-4 {
+	background: url(../img/slides/section-bg-4.jpg) center transparent;
+	background-size: cover;
+}
+.section-bg-5 {
+	background: url(../img/slides/section-bg-5.jpg) center transparent;
+	background-size: cover;
+}
+.section-bg-6 {
+	background: url(../img/slides/section-bg-6.jpg) center transparent;
+	background-size: cover;
+}
+.section-bg-7 {
+	background: url(../img/slides/section-bg-7.jpg) center transparent;
+	background-size: cover;
+}
+.section-bg-8 {
+	background: url(../img/slides/section-bg-8.jpg) center transparent;
+	background-size: cover;
+}
+.section-bg-9 {
+	background: url(../img/slides/section-bg-9.jpg) center transparent;
+	background-size: cover;
+}
+.section-bg-10 {
+	background: url(../img/slides/section-bg-10.jpg) center transparent; background-size: cover;
+}
+
+.logo {
+	position: absolute; z-index: 9999;
+	left: 30px; top: 30px;
+	img {
+		width: 136px; height: 84px;
+	}
+}
+.number {
+	position: absolute; z-index: 9999;
+	right: 30px; top: 30px;
+	font-size: 30px;
+	@include HelveticaNeueCyrRoman;
+}
+.number:before {
+	content: "";
+	display: block;
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	background: url(../img/icons/phone.png) center transparent no-repeat; background-size: contain;
+	margin-left: -40px;
+}
+.button {
+	display: block;
+	position: absolute; z-index: 9999;
+	right: 30px; bottom: 30px;
+	color: $button-font-color;
+	padding: 20px 40px;
+	border: 2px solid #fff;
+	text-decoration: none;
+}
+
+a.developer {
+	position: absolute; z-index: 9999;
+	left: 30px; bottom: 30px;
+	color: #fff;
+	opacity: 0.4;
+	text-decoration: none;
+	font-size: 18px;
+	&:hover {opacity: 1;}
+}
+
+
+/*************************/
+
+.section-text {
+	width: 540px; padding-right: 38px;
+	position: absolute; right: 0; top: 200px; z-index: 9999;
+	@include HelveticaNeueCyrLight;
+}
+h1.section-text__title {
+	font-size: 64px; font-weight: normal;
+}
+p.section-text__text {
+	font-size: 24px;
+}
+
+/**********************/
+
+.section-form-adress {
+	width: 64%; padding-right: 38px;
+	position: absolute; right: 0; top: 200px; z-index: 9999;
+	@include HelveticaNeueCyrLight;
+}
+h1.section-text__title {
+	font-size: 64px; font-weight: normal;
+}
+p.section-text__text {
+	font-size: 24px;
+}
+
+.section-order {
+	width: 50%; float: left; text-align: center;
+	h1 {
+		@include HelveticaNeueCyrLight;
+		font-size: 52px; font-weight: normal;
+		span {
+			@include HelveticaNeueCyrBold;
+			font-weight: 800;
+		}
+	}
+	h4 {
+		@include HelveticaNeueCyrLight;
+		font-size: 20px; font-weight: normal;
+		span {
+			@include HelveticaNeueCyrBold;
+			font-weight: 800;
+		}
+	}
+}
+
+form {text-align: left;}
+
+input, textarea {
+	color: #fff;
+	background-color: transparent;
+	border: 1px solid #fff;
+	padding: 8px 20px;
+	outline: none;
+	@include HelveticaNeueCyrLight;
+	font-size: 18px;
+	box-sizing: border-box;
+}
+
+input::-webkit-input-placeholder {color: #fff;}
+input:-moz-placeholder {color: #fff;}
+textarea::-webkit-input-placeholder {color: #fff;}
+textarea:-moz-placeholder {color: #fff;}
+
+textarea {
+	resize: none; width: 100%; height: 90px; display: block;
+}
+
+input[type="submit"] {
+	padding: 8px 66px;
+	// Цвета как у другой кнопки - они одинаковы
+	border: 3px solid #fff;
+	color: #fff;
+	//
+	@include HelveticaNeueCyrBold; font-size: 20px; text-decoration: none;
+	cursor: pointer;
+	float: right;
+}
+
+/* /form elements */
+
+.request {
+	display: none;
+	width: 280px; height: 100px; position: absolute; top: 0; left: 0; bottom: 0;  margin: auto; padding-left: 60px;
+	@include HelveticaNeueCyrLight; font-weight: normal;
+	font-size: 40px; color: #fff;
+}
+
+.section-adress {
+	width: 50%; position: absolute; bottom: 0; right: 0;
+	padding: 10px 0 0 0; border-top: 1px solid #fff;
+}
+p.adress {padding-left: 40px; line-height: 40px;}
+p.adress:before {
+	content: ""; 
+	display: block;
+	width: 40px; height: 40px;
+	position: absolute; margin-left: -40px;
+	background: url(../img/icons/pin.png) center transparent no-repeat; background-size: 20px 32px;
+}
+p.work-time {padding-left: 40px; line-height: 40px;}
+p.work-time:before {
+	content: ""; 
+	display: block;
+	width: 40px; height: 40px;
+	position: absolute; margin-left: -40px;
+	background: url(../img/icons/clock.png) center transparent no-repeat; background-size: 22px 22px;
+}
+
+/**********************/
+
+@import "adaptive";
